@@ -18,7 +18,7 @@ namespace NewAPI.Controllers
                 return Unauthorized("Invalid credentials");
 
             var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("SUPER_SECRET_KEY_123456789"));
+                Encoding.UTF8.GetBytes("SUPER_SECRET_KEY_123456789_ABCDEF_9876543210"));
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
