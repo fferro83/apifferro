@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NewAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NewAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PersonController : Controller
