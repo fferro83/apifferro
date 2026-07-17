@@ -31,3 +31,4 @@ C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\refint\NewAPI.dll
 C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\NewAPI.pdb
 C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\NewAPI.genruntimeconfig.cache
 C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\ref\NewAPI.dll
+C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\NewAPI.sourcelink.json

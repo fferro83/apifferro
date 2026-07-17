@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\colorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\colorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ColorsController.cs",
               "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ColorsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ColorsController.cs",
               "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ColorsController.cs",
               "RelativeToolTip": "Controllers\\ColorsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-16T22:09:45.353Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ColorService.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ColorService.cs",
-              "RelativeDocumentMoniker": "Services\\ColorService.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ColorService.cs",
-              "RelativeToolTip": "Services\\ColorService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-16T22:09:40.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-16T22:06:12.443Z",
+              "WhenOpened": "2026-07-17T16:36:39.719Z",
               "EditorCaption": ""
             }
           ]
