@@ -32,3 +32,12 @@ C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\NewAPI.pdb
 C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\NewAPI.genruntimeconfig.cache
 C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\ref\NewAPI.dll
 C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\NewAPI.sourcelink.json
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
