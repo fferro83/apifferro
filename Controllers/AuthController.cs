@@ -32,7 +32,7 @@ namespace NewAPI.Controllers
                 issuer: "NewAPI",
                 audience: "NewAPI",
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),
+                expires: DateTime.UtcNow.AddMinutes(2),
                 signingCredentials: creds
             );
 
