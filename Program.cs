@@ -27,7 +27,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidIssuer = "NewAPI",
             ValidAudience = "NewAPI",
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes("SUPER_SECRET_KEY_123456789"))
+                Encoding.UTF8.GetBytes("SUPER_SECRET_KEY_123456789_ABCDEF_9876543210"))
         };
     });
 
