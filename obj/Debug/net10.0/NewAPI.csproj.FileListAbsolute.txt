@@ -158,3 +158,9 @@ C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\runtimes\win\lib\net9.0\Mic
 C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\DnsClient.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\MongoDB.Bson.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\MongoDB.Driver.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\SharpCompress.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Snappier.dll
+C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\ZstdSharp.dll

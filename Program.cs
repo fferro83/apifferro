@@ -1,11 +1,19 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
 using NewAPI.Data;
 using NewAPI.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddSingleton<IMongoClient>(sp =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("MongoConnection");
+    return new MongoClient(connectionString);
+});
+
+builder.Services.AddSingleton<MongoDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllers();
