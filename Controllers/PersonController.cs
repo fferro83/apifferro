@@ -1,46 +1,33 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NewAPI.Models;
 using NewAPI.Data;
-using Microsoft.AspNetCore.Authorization;
+using NewAPI.Models;
 
 namespace NewAPI.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class PersonController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly MongoDbContext _context;
 
-        public PersonController(AppDbContext context)
+        public PersonController(MongoDbContext context)
         {
             _context = context;
         }
 
         [HttpPost]
-        public IActionResult CreatePerson([FromBody] PersonRequest request)
+        public IActionResult CreatePerson([FromBody] Person request)
         {
             if (request == null)
                 return BadRequest("Invalid request");
 
-            var person = new Person
-            {
-                Name = request.Name,
-                Perfil = request.Perfil,
-                SSN = request.SSN,
-                Latitude = request.Latitude,
-                Longitude = request.Longitude
-            };
-
-            _context.Persons.Add(person);
-            _context.SaveChanges();
+            _context.Persons.InsertOne(request);
 
             return Ok(new
             {
-                Message = "Added Successfully",
-                Data = person
+                Message = "Persona insertada correctamente en MongoDB",
+                Data = request
             });
         }
     }
 }
-
