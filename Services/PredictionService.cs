@@ -25,13 +25,12 @@ namespace NewAPI.Services
             // 2. Split into train/test (80/20)
             var split = _mlContext.Data.TrainTestSplit(dataView, testFraction: 0.2);
 
-            // 3. Build pipeline
+            // 3. Build pipeline (binary classification — matches bool NeedsMaintenance)
             var pipeline = _mlContext.Transforms.Categorical.OneHotEncoding("AssetTypeEncoded", "AssetType")
                 .Append(_mlContext.Transforms.Concatenate("Features",
                     "AssetTypeEncoded", "Latitude", "Longitude", "AgeYears", "LastInspectionMonthsAgo"))
-                .Append(_mlContext.Transforms.Conversion.MapValueToKey("Label", "NeedsMaintenance"))
-                .Append(_mlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy())
-                .Append(_mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+                .Append(_mlContext.BinaryClassification.Trainers.SdcaLogisticRegression(
+                    labelColumnName: "NeedsMaintenance", featureColumnName: "Features"));
 
             // Note: for pure binary Yes/No, use BinaryClassification trainer instead:
             // var pipeline = _mlContext.Transforms.Categorical.OneHotEncoding("AssetTypeEncoded", "AssetType")

@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\imageclassificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\imageclassificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\models\\datamodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:models\\datamodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +13,34 @@
     {
       "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\data\\sample-data.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:data\\sample-data.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\imageclassificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\imageclassificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,76 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ImageController.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ImageController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ImageController.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ImageController.cs",
-              "RelativeToolTip": "Controllers\\ImageController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T00:09:53.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ImageClassificationService.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ImageClassificationService.cs",
-              "RelativeDocumentMoniker": "Services\\ImageClassificationService.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ImageClassificationService.cs",
-              "RelativeToolTip": "Services\\ImageClassificationService.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAwwEwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T00:08:57.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PredictionController.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PredictionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PredictionController.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PredictionController.cs",
-              "RelativeToolTip": "Controllers\\PredictionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T00:01:04.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T23:59:38.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PredictionService.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\PredictionService.cs",
-              "RelativeDocumentMoniker": "Services\\PredictionService.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\PredictionService.cs",
-              "RelativeToolTip": "Services\\PredictionService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T23:54:12.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "sample-data.csv",
               "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\sample-data.csv",
               "RelativeDocumentMoniker": "Data\\sample-data.csv",
@@ -120,16 +67,115 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ImageController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ImageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ImageController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ImageController.cs",
+              "RelativeToolTip": "Controllers\\ImageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:09:53.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ImageClassificationService.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ImageClassificationService.cs",
+              "RelativeDocumentMoniker": "Services\\ImageClassificationService.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ImageClassificationService.cs",
+              "RelativeToolTip": "Services\\ImageClassificationService.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwEwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:08:57.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T23:59:38.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "PredictionController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PredictionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PredictionController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PredictionController.cs",
+              "RelativeToolTip": "Controllers\\PredictionController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:01:04.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PredictionService.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\PredictionService.cs",
+              "RelativeDocumentMoniker": "Services\\PredictionService.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\PredictionService.cs",
+              "RelativeToolTip": "Services\\PredictionService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowCAAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T23:54:12.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "DataModels.cs",
               "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Models\\DataModels.cs",
               "RelativeDocumentMoniker": "Models\\DataModels.cs",
               "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Models\\DataModels.cs",
               "RelativeToolTip": "Models\\DataModels.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAqwCUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-29T23:49:32.763Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ColorService.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ColorService.cs",
+              "RelativeDocumentMoniker": "Services\\ColorService.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ColorService.cs",
+              "RelativeToolTip": "Services\\ColorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:13:38.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PersonController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PersonController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PersonController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PersonController.cs",
+              "RelativeToolTip": "Controllers\\PersonController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:13:43.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:13:52.554Z"
             }
           ]
         }
