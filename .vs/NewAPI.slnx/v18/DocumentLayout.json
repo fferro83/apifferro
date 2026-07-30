@@ -3,48 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\data\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:data\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\imageclassificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\imageclassificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\data\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:data\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\models\\datamodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:models\\datamodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\colorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\colorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:models\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\models\\personrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:models\\personrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\data\\sample-data.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:data\\sample-data.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,56 +50,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-20T18:21:16.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MongoDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\MongoDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\MongoDbContext.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\MongoDbContext.cs",
-              "RelativeToolTip": "Data\\MongoDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T17:56:06.962Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T17:53:11.162Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-20T17:49:08.261Z",
+              "WhenOpened": "2026-07-30T00:13:52.554Z",
               "EditorCaption": ""
             },
             {
@@ -114,82 +73,114 @@
               "RelativeDocumentMoniker": "Controllers\\PersonController.cs",
               "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PersonController.cs",
               "RelativeToolTip": "Controllers\\PersonController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T22:13:07.744Z",
+              "WhenOpened": "2026-07-30T00:13:43.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ColorService.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ColorService.cs",
+              "RelativeDocumentMoniker": "Services\\ColorService.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ColorService.cs",
+              "RelativeToolTip": "Services\\ColorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:13:38.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ImageController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ImageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ImageController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ImageController.cs",
+              "RelativeToolTip": "Controllers\\ImageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:09:53.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ImageClassificationService.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ImageClassificationService.cs",
+              "RelativeDocumentMoniker": "Services\\ImageClassificationService.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\ImageClassificationService.cs",
+              "RelativeToolTip": "Services\\ImageClassificationService.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwEwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:08:57.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T23:59:38.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PredictionController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PredictionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PredictionController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PredictionController.cs",
+              "RelativeToolTip": "Controllers\\PredictionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T00:01:04.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PredictionService.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\PredictionService.cs",
+              "RelativeDocumentMoniker": "Services\\PredictionService.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\PredictionService.cs",
+              "RelativeToolTip": "Services\\PredictionService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T23:54:12.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "sample-data.csv",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\sample-data.csv",
+              "RelativeDocumentMoniker": "Data\\sample-data.csv",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\sample-data.csv",
+              "RelativeToolTip": "Data\\sample-data.csv",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
+              "WhenOpened": "2026-07-29T23:50:46.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\Person.cs",
-              "RelativeDocumentMoniker": "Data\\Person.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\Person.cs",
-              "RelativeToolTip": "Data\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "DataModels.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Models\\DataModels.cs",
+              "RelativeDocumentMoniker": "Models\\DataModels.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Models\\DataModels.cs",
+              "RelativeToolTip": "Models\\DataModels.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwCUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T23:45:50.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T23:31:10.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ColorsController.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ColorsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ColorsController.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ColorsController.cs",
-              "RelativeToolTip": "Controllers\\ColorsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T22:52:04.731Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T22:42:47.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Models\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "Models\\LoginRequest.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Models\\LoginRequest.cs",
-              "RelativeToolTip": "Models\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T22:41:29.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PersonRequest.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Models\\PersonRequest.cs",
-              "RelativeDocumentMoniker": "Models\\PersonRequest.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Models\\PersonRequest.cs",
-              "RelativeToolTip": "Models\\PersonRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-17T22:12:03.832Z"
+              "WhenOpened": "2026-07-29T23:49:32.763Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -6,6 +6,7 @@
         public string Name { get; set; }
         public string Perfil { get; set; }
         public string SSN { get; set; }
+        public string email { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
     }

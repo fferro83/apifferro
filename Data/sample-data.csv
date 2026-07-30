@@ -1,0 +1,5 @@
+AssetId,AssetType,Latitude,Longitude,AgeYears,LastInspectionMonthsAgo,NeedsMaintenance
+A001,Pole,37.9101,-122.0652,15,24,true
+A002,Transformer,37.9050,-122.0700,3,6,false
+A003,Meter,37.8990,-122.0610,20,36,true
+A004,Pole,37.9120,-122.0580,5,3,false
