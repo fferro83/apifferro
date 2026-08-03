@@ -74,12 +74,26 @@
                     <div class="card-body">
                         <h5 class="card-title">Classify Asset Photo</h5>
                         <form id="imageForm">
+                            <div class="mb-2">
+                                <label class="form-label">Expected Asset Type</label>
+                                <select class="form-select" id="expectedAssetType">
+                                    <option value="">Show all detections</option>
+                                    <option value="pole">Pole</option>
+                                    <option value="transformer">Transformer</option>
+                                    <option value="meter">Meter</option>
+                                    <option value="substation">Substation</option>
+                                </select>
+                            </div>
                             <div class="mb-3">
                                 <input type="file" class="form-control" id="imageFile" accept="image/*" required>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Classify</button>
                         </form>
+                        <div class="mb-3">
+                            <canvas id="imageCanvas" class="img-fluid rounded border d-none" style="max-width: 100%;"></canvas>
+                        </div>
                         <div id="imageResult" class="alert alert-secondary mt-3 mb-0 d-none"></div>
+                        <div id="detectionsList" class="mt-3"></div>
                     </div>
                 </div>
             </div>
@@ -98,7 +112,7 @@
     </main>
 
     <footer class="text-center text-muted py-4 mt-4">
-        Utility Asset AI &middot; Built with .NET + ML.NET
+        Utility Asset AI - Epik Solutions
     </footer>
 
     <!-- Bootstrap JS (for future components like modals/dropdowns) -->

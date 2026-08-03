@@ -83,95 +83,6 @@
           }
         }
       },
-      "LG.Microsoft.ML/1.6.0.4": {
-        "type": "package",
-        "dependencies": {
-          "LG.Microsoft.ML.CpuMath": "1.6.0.4",
-          "LG.Microsoft.ML.DataView": "1.6.0.4",
-          "Newtonsoft.Json": "10.0.3",
-          "System.CodeDom": "4.4.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.ML.Core.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Data.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.PCA.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.StandardTrainers.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Transforms.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.ML.Core.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Data.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.PCA.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.StandardTrainers.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.Transforms.dll": {},
-          "lib/netstandard2.0/Microsoft.ML.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "build/netstandard2.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win-x64/native/LdaNative.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          }
-        }
-      },
-      "LG.Microsoft.ML.CpuMath/1.6.0.4": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.ML.CpuMath.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.ML.CpuMath.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win-x64/nativeassets/netcoreapp3.1/_._": {
-            "assetType": "native",
-            "rid": "win-x64"
-          }
-        }
-      },
-      "LG.Microsoft.ML.DataView/1.6.0.4": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.ML.DataView.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.ML.DataView.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "LG.Microsoft.ML.ImageAnalytics/1.6.0.4": {
-        "type": "package",
-        "dependencies": {
-          "LG.Microsoft.ML": "1.6.0.4",
-          "System.Drawing.Common": "4.5.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.ML.ImageAnalytics.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.ML.ImageAnalytics.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "MethodBoundaryAspect.Fody/2.0.148": {
         "type": "package",
         "dependencies": {
@@ -206,7 +117,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.OpenApi/10.0.9": {
+      "Microsoft.AspNetCore.OpenApi/10.0.10": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "2.0.0"
@@ -835,7 +746,7 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Abstractions/8.19.2": {
+      "Microsoft.IdentityModel.Abstractions/8.22.0": {
         "type": "package",
         "compile": {
           "lib/net10.0/Microsoft.IdentityModel.Abstractions.dll": {
@@ -848,10 +759,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/8.19.2": {
+      "Microsoft.IdentityModel.JsonWebTokens/8.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "8.19.2"
+          "Microsoft.IdentityModel.Tokens": "8.22.0"
         },
         "compile": {
           "lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -864,10 +775,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Logging/8.19.2": {
+      "Microsoft.IdentityModel.Logging/8.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "8.19.2"
+          "Microsoft.IdentityModel.Abstractions": "8.22.0"
         },
         "compile": {
           "lib/net10.0/Microsoft.IdentityModel.Logging.dll": {
@@ -913,11 +824,11 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Tokens/8.19.2": {
+      "Microsoft.IdentityModel.Tokens/8.22.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.Cryptography": "10.0.2",
-          "Microsoft.IdentityModel.Logging": "8.19.2"
+          "Microsoft.IdentityModel.Logging": "8.22.0"
         },
         "compile": {
           "lib/net10.0/Microsoft.IdentityModel.Tokens.dll": {
@@ -1127,6 +1038,119 @@
           }
         }
       },
+      "Microsoft.ML.OnnxRuntime/1.28.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime.Managed": "1.28.0"
+        },
+        "build": {
+          "build/netstandard2.1/Microsoft.ML.OnnxRuntime.props": {},
+          "build/netstandard2.1/Microsoft.ML.OnnxRuntime.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/android/native/onnxruntime.aar": {
+            "assetType": "native",
+            "rid": "android"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework.zip": {
+            "assetType": "native",
+            "rid": "ios"
+          },
+          "runtimes/linux-arm64/native/libonnxruntime.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-arm64/native/libonnxruntime_providers_shared.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-x64/native/libonnxruntime.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libonnxruntime_providers_shared.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-arm64/native/libonnxruntime.dylib": {
+            "assetType": "native",
+            "rid": "osx-arm64"
+          },
+          "runtimes/win-arm64/native/onnxruntime.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-arm64/native/onnxruntime.lib": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-arm64/native/onnxruntime_providers_shared.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-arm64/native/onnxruntime_providers_shared.lib": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/onnxruntime.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/onnxruntime.lib": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/onnxruntime_providers_shared.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/onnxruntime_providers_shared.lib": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "Microsoft.ML.OnnxRuntime.Managed/1.28.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Numerics.Tensors": "9.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.ML.OnnxRuntime.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.ML.OnnxRuntime.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "build/netstandard2.0/Microsoft.ML.OnnxRuntime.Managed.targets": {}
+        }
+      },
+      "Microsoft.ML.OnnxTransformer/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.30.2",
+          "Microsoft.Bcl.AsyncInterfaces": "9.0.4",
+          "Microsoft.ML": "5.0.0",
+          "Microsoft.ML.OnnxRuntime.Managed": "1.23.2",
+          "Newtonsoft.Json": "13.0.3",
+          "System.CodeDom": "9.0.4",
+          "System.Numerics.Tensors": "9.0.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.OnnxTransformer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.OnnxTransformer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.ML.TensorFlow/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -1172,15 +1196,6 @@
           }
         }
       },
-      "Microsoft.NETCore.Platforms/2.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard1.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/_._": {}
-        }
-      },
       "Microsoft.OpenApi/2.0.0": {
         "type": "package",
         "compile": {
@@ -1217,24 +1232,6 @@
         "runtime": {
           "lib/net8.0/Microsoft.VisualStudio.SolutionPersistence.dll": {
             "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Win32.SystemEvents/4.5.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0"
-        },
-        "compile": {
-          "ref/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll": {
-            "assetType": "runtime",
-            "rid": "win"
           }
         }
       },
@@ -1347,6 +1344,19 @@
         },
         "runtime": {
           "lib/net10.0/SharpCompress.dll": {}
+        }
+      },
+      "SixLabors.ImageSharp/2.1.11": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
         }
       },
       "SkiaSharp/2.88.8": {
@@ -1608,34 +1618,11 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "System.Drawing.Common/4.5.0": {
+      "System.IdentityModel.Tokens.Jwt/8.22.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0",
-          "Microsoft.Win32.SystemEvents": "4.5.0"
-        },
-        "compile": {
-          "ref/netstandard2.0/System.Drawing.Common.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Drawing.Common.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.IdentityModel.Tokens.Jwt/8.19.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "8.19.2",
-          "Microsoft.IdentityModel.Tokens": "8.19.2"
+          "Microsoft.IdentityModel.JsonWebTokens": "8.22.0",
+          "Microsoft.IdentityModel.Tokens": "8.22.0"
         },
         "compile": {
           "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -1905,83 +1892,6 @@
         "logo.png"
       ]
     },
-    "LG.Microsoft.ML/1.6.0.4": {
-      "sha512": "GrUwj2hkM0OPtZUWhcCwrcHCGOUbcmSU/Yrqn9TVVwXLbgWs2ixRYEA/TcaE5j9CQqQ+Fm7fyGeSdG1r8E8PpQ==",
-      "type": "package",
-      "path": "lg.microsoft.ml/1.6.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "THIRD-PARTY-NOTICES.TXT",
-        "build/netstandard2.0/LG.Microsoft.ML.props",
-        "build/netstandard2.0/LG.Microsoft.ML.targets",
-        "lg.microsoft.ml.1.6.0.4.nupkg.sha512",
-        "lg.microsoft.ml.nuspec",
-        "lib/netstandard2.0/Microsoft.ML.Core.dll",
-        "lib/netstandard2.0/Microsoft.ML.Data.dll",
-        "lib/netstandard2.0/Microsoft.ML.KMeansClustering.dll",
-        "lib/netstandard2.0/Microsoft.ML.PCA.dll",
-        "lib/netstandard2.0/Microsoft.ML.StandardTrainers.dll",
-        "lib/netstandard2.0/Microsoft.ML.Transforms.dll",
-        "lib/netstandard2.0/Microsoft.ML.dll",
-        "lib/netstandard2.0/Microsoft.ML.xml",
-        "mlnetlogo.png",
-        "runtimes/win-x64/native/LdaNative.dll"
-      ]
-    },
-    "LG.Microsoft.ML.CpuMath/1.6.0.4": {
-      "sha512": "YtYsyedwqEZ+jjqzRfDMmCz+elehY7g2imdO+PiDqNzVEMI1iE66IgtMV2jmitO/atR3jkOLqW1Bz8SATlugyQ==",
-      "type": "package",
-      "path": "lg.microsoft.ml.cpumath/1.6.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lg.microsoft.ml.cpumath.1.6.0.4.nupkg.sha512",
-        "lg.microsoft.ml.cpumath.nuspec",
-        "lib/netcoreapp3.1/Microsoft.ML.CpuMath.dll",
-        "lib/netcoreapp3.1/Microsoft.ML.CpuMath.xml",
-        "lib/netstandard2.0/Microsoft.ML.CpuMath.dll",
-        "lib/netstandard2.0/Microsoft.ML.CpuMath.xml",
-        "mlnetlogo.png",
-        "runtimes/win-x64/nativeassets/netcoreapp3.1/_._",
-        "runtimes/win-x64/nativeassets/netstandard2.0/CpuMathNative.dll"
-      ]
-    },
-    "LG.Microsoft.ML.DataView/1.6.0.4": {
-      "sha512": "Ool2pRQZQKodHoAE0/C5o5WTsFpeQeXaJvZV/rPSAHX/j2QpHi3I5IH8PIlFachcIGG3SbWhLTlYy2WX8Ex/OQ==",
-      "type": "package",
-      "path": "lg.microsoft.ml.dataview/1.6.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lg.microsoft.ml.dataview.1.6.0.4.nupkg.sha512",
-        "lg.microsoft.ml.dataview.nuspec",
-        "lib/netstandard2.0/Microsoft.ML.DataView.dll",
-        "lib/netstandard2.0/Microsoft.ML.DataView.xml",
-        "mlnetlogo.png"
-      ]
-    },
-    "LG.Microsoft.ML.ImageAnalytics/1.6.0.4": {
-      "sha512": "2erYj5Kst/3s6VubBzdJ9QB3SEQjMxARTinoIHSf7EkEfw2Qk3GAW4JvNjjTNqcost7J+o1W33C7PNnZCu3tjw==",
-      "type": "package",
-      "path": "lg.microsoft.ml.imageanalytics/1.6.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lg.microsoft.ml.imageanalytics.1.6.0.4.nupkg.sha512",
-        "lg.microsoft.ml.imageanalytics.nuspec",
-        "lib/netstandard2.0/Microsoft.ML.ImageAnalytics.dll",
-        "lib/netstandard2.0/Microsoft.ML.ImageAnalytics.xml",
-        "mlnetlogo.png"
-      ]
-    },
     "MethodBoundaryAspect.Fody/2.0.148": {
       "sha512": "QFZOs5SRehBbRYmuPvdsgr3PhqkoERO9YT0jxW4JzmWIZmk2nlMz4uokz+HiWtK9n+2e0eAZ0pX7om+yMbserw==",
       "type": "package",
@@ -2013,10 +1923,10 @@
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.OpenApi/10.0.9": {
-      "sha512": "1ihb8FO9cGgEK1/m3CTtT/SfnynwmiZib0W2pcDVj3KSWk/Sca4VOXEtaptKQc582zpFrzTFiwkGRCglt6H+WQ==",
+    "Microsoft.AspNetCore.OpenApi/10.0.10": {
+      "sha512": "d4Atx9IHq7JgX0F/h7Db+m9zAUzC+cKdI9k+OWnnyQIOUQtfvjIEuhvbjPigVMkAmPUgCbJ8Yp6M9ghUqHtJSQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.openapi/10.0.9",
+      "path": "microsoft.aspnetcore.openapi/10.0.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2027,7 +1937,7 @@
         "build/Microsoft.AspNetCore.OpenApi.targets",
         "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll",
         "lib/net10.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.10.0.9.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -3447,10 +3357,10 @@
         "microsoft.identity.client.extensions.msal.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Abstractions/8.19.2": {
-      "sha512": "HJbo/lnSfNHUfphPRT910poQc4T2/9+8svFLvzuaYHGAOJ2Tu+oEDqpX0BVP3BJ4OuUM1kylEKyaiX2fCAK3Cw==",
+    "Microsoft.IdentityModel.Abstractions/8.22.0": {
+      "sha512": "LU3V3owsu4vGpCg2kyL7SsQEuHwcoJ8FSNBqzLADzCf3/PcKUTcx5Plsd51DoTJMfK/WigXV/03UhaN5JXE6uQ==",
       "type": "package",
-      "path": "microsoft.identitymodel.abstractions/8.19.2",
+      "path": "microsoft.identitymodel.abstractions/8.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3469,14 +3379,14 @@
         "lib/net9.0/Microsoft.IdentityModel.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
-        "microsoft.identitymodel.abstractions.8.19.2.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.8.22.0.nupkg.sha512",
         "microsoft.identitymodel.abstractions.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.JsonWebTokens/8.19.2": {
-      "sha512": "ui3fuBT4fs8kdKfBthI4NzLYIBIneEVS8UrL1JVBzAn80UiKmngBBi0BEByE7n/9c+EElcfFlCMFFTqpkBSLNA==",
+    "Microsoft.IdentityModel.JsonWebTokens/8.22.0": {
+      "sha512": "kv6peMLjALZLDAy2H3F77KjVRdwiscn2p/g3ui2chcbuEcAX2MpAbyDcYnJ7Vyh8jZ1aJWrniUMCDWoOgnu4NQ==",
       "type": "package",
-      "path": "microsoft.identitymodel.jsonwebtokens/8.19.2",
+      "path": "microsoft.identitymodel.jsonwebtokens/8.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3495,14 +3405,14 @@
         "lib/net9.0/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "microsoft.identitymodel.jsonwebtokens.8.19.2.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.8.22.0.nupkg.sha512",
         "microsoft.identitymodel.jsonwebtokens.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Logging/8.19.2": {
-      "sha512": "r5YLDIxGOnkVJHrqXv/iD1FM1CgGrQOdriXuvuWvTPmKbnGANhEysq9XKmN6IHjf2a+9bAGEpnoRBsAQlvJU5w==",
+    "Microsoft.IdentityModel.Logging/8.22.0": {
+      "sha512": "G9Tl0yXSlr2pkXv4EpXjO16M4q6oo9N/od+gNyOusZ8yM8LZg1H3f/QOMFuOJiV6znzY5MkAREU97JRRnqpEQw==",
       "type": "package",
-      "path": "microsoft.identitymodel.logging/8.19.2",
+      "path": "microsoft.identitymodel.logging/8.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3521,7 +3431,7 @@
         "lib/net9.0/Microsoft.IdentityModel.Logging.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.8.19.2.nupkg.sha512",
+        "microsoft.identitymodel.logging.8.22.0.nupkg.sha512",
         "microsoft.identitymodel.logging.nuspec"
       ]
     },
@@ -3577,10 +3487,10 @@
         "microsoft.identitymodel.protocols.openidconnect.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Tokens/8.19.2": {
-      "sha512": "GtPC1S02uH1gOO4fQ+zRysIicKmEXaYFP8PIkdJYXqMyruYhopre4ozVHp0XiDSA0+GJvOZH9prxCPvgBMg4Ww==",
+    "Microsoft.IdentityModel.Tokens/8.22.0": {
+      "sha512": "i4lywKKUuVmheCUA+w/q8QNPReNI0qanHI9hhz48AFqD1ljyb8sxPL2RbXOGiPV13XdJ4kxieL9ukS7tD43LxA==",
       "type": "package",
-      "path": "microsoft.identitymodel.tokens/8.19.2",
+      "path": "microsoft.identitymodel.tokens/8.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3599,7 +3509,7 @@
         "lib/net9.0/Microsoft.IdentityModel.Tokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.8.19.2.nupkg.sha512",
+        "microsoft.identitymodel.tokens.8.22.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
@@ -3711,6 +3621,110 @@
         "mlnetlogo.png"
       ]
     },
+    "Microsoft.ML.OnnxRuntime/1.28.0": {
+      "sha512": "xpguSCrXBe5E1l1088S7UqnI36EHaTL6CJMHEhwfGBoSwyPH5Q/IkbkBBk/GwXWzsVyEXpQm42ZimSAQs0/zKA==",
+      "type": "package",
+      "path": "microsoft.ml.onnxruntime/1.28.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "ORT_icon_for_light_bg.png",
+        "Privacy.md",
+        "README.md",
+        "ThirdPartyNotices.txt",
+        "build/native/Microsoft.ML.OnnxRuntime.props",
+        "build/native/Microsoft.ML.OnnxRuntime.targets",
+        "build/native/include/cpu_provider_factory.h",
+        "build/native/include/onnxruntime_c_api.h",
+        "build/native/include/onnxruntime_cxx_api.h",
+        "build/native/include/onnxruntime_cxx_inline.h",
+        "build/native/include/onnxruntime_env_config_keys.h",
+        "build/native/include/onnxruntime_ep_c_api.h",
+        "build/native/include/onnxruntime_ep_device_ep_metadata_keys.h",
+        "build/native/include/onnxruntime_error_code.h",
+        "build/native/include/onnxruntime_experimental_c_api.h",
+        "build/native/include/onnxruntime_experimental_c_api.inc",
+        "build/native/include/onnxruntime_experimental_cxx_api.h",
+        "build/native/include/onnxruntime_float16.h",
+        "build/native/include/onnxruntime_lite_custom_op.h",
+        "build/native/include/onnxruntime_run_options_config_keys.h",
+        "build/native/include/onnxruntime_session_options_config_keys.h",
+        "build/native/include/provider_options.h",
+        "build/net9.0-android35.0/Microsoft.ML.OnnxRuntime.targets",
+        "build/net9.0-ios18.0/Microsoft.ML.OnnxRuntime.targets",
+        "build/net9.0-maccatalyst18.0/_._",
+        "build/netstandard2.0/Microsoft.ML.OnnxRuntime.props",
+        "build/netstandard2.0/Microsoft.ML.OnnxRuntime.targets",
+        "build/netstandard2.1/Microsoft.ML.OnnxRuntime.props",
+        "build/netstandard2.1/Microsoft.ML.OnnxRuntime.targets",
+        "buildTransitive/net9.0-android35.0/Microsoft.ML.OnnxRuntime.targets",
+        "buildTransitive/net9.0-ios18.0/Microsoft.ML.OnnxRuntime.targets",
+        "buildTransitive/net9.0-maccatalyst18.0/_._",
+        "microsoft.ml.onnxruntime.1.28.0.nupkg.sha512",
+        "microsoft.ml.onnxruntime.nuspec",
+        "runtimes/android/native/onnxruntime.aar",
+        "runtimes/ios/native/onnxruntime.xcframework.zip",
+        "runtimes/linux-arm64/native/libonnxruntime.so",
+        "runtimes/linux-arm64/native/libonnxruntime_providers_shared.so",
+        "runtimes/linux-x64/native/libonnxruntime.so",
+        "runtimes/linux-x64/native/libonnxruntime_providers_shared.so",
+        "runtimes/osx-arm64/native/libonnxruntime.dylib",
+        "runtimes/win-arm64/native/onnxruntime.dll",
+        "runtimes/win-arm64/native/onnxruntime.lib",
+        "runtimes/win-arm64/native/onnxruntime_providers_shared.dll",
+        "runtimes/win-arm64/native/onnxruntime_providers_shared.lib",
+        "runtimes/win-x64/native/onnxruntime.dll",
+        "runtimes/win-x64/native/onnxruntime.lib",
+        "runtimes/win-x64/native/onnxruntime_providers_shared.dll",
+        "runtimes/win-x64/native/onnxruntime_providers_shared.lib"
+      ]
+    },
+    "Microsoft.ML.OnnxRuntime.Managed/1.28.0": {
+      "sha512": "4ecKjwASHhAZXczK/xm5KU6MdvoIGfMd23UAwDbM9vfcfgqZgNqvFWPZPT0Elc1wu5vXWs2Kij1ZBmHCcv1UlA==",
+      "type": "package",
+      "path": "microsoft.ml.onnxruntime.managed/1.28.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "ORT_icon_for_light_bg.png",
+        "Privacy.md",
+        "README.md",
+        "ThirdPartyNotices.txt",
+        "build/netstandard2.0/Microsoft.ML.OnnxRuntime.Managed.targets",
+        "lib/net8.0/Microsoft.ML.OnnxRuntime.dll",
+        "lib/net8.0/Microsoft.ML.OnnxRuntime.pdb",
+        "lib/net9.0-android35.0/Microsoft.ML.OnnxRuntime.dll",
+        "lib/net9.0-android35.0/Microsoft.ML.OnnxRuntime.pdb",
+        "lib/net9.0-android35.0/Microsoft.ML.OnnxRuntime.xml",
+        "lib/net9.0-ios18.0/Microsoft.ML.OnnxRuntime.dll",
+        "lib/net9.0-ios18.0/Microsoft.ML.OnnxRuntime.pdb",
+        "lib/net9.0-maccatalyst18.0/Microsoft.ML.OnnxRuntime.dll",
+        "lib/net9.0-maccatalyst18.0/Microsoft.ML.OnnxRuntime.pdb",
+        "lib/netstandard2.0/Microsoft.ML.OnnxRuntime.dll",
+        "lib/netstandard2.0/Microsoft.ML.OnnxRuntime.pdb",
+        "microsoft.ml.onnxruntime.managed.1.28.0.nupkg.sha512",
+        "microsoft.ml.onnxruntime.managed.nuspec"
+      ]
+    },
+    "Microsoft.ML.OnnxTransformer/5.0.0": {
+      "sha512": "nKhZGsa+CS546GyxNaetoCWHpyrkbythSFb6QXUMPPGjGQN41Y/sxIi2AH8uOUvZaa/lU9dlGj5p1NpMUzI8Ng==",
+      "type": "package",
+      "path": "microsoft.ml.onnxtransformer/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard2.0/Microsoft.ML.OnnxTransformer.dll",
+        "lib/netstandard2.0/Microsoft.ML.OnnxTransformer.xml",
+        "microsoft.ml.onnxtransformer.5.0.0.nupkg.sha512",
+        "microsoft.ml.onnxtransformer.nuspec",
+        "mlnetlogo.png"
+      ]
+    },
     "Microsoft.ML.TensorFlow/5.0.0": {
       "sha512": "YIWUsjwCvtq2VqnPmBQRDSvFy9pzw3FmDH6Iv5LeHfeAkuDLyfWUre0s5qENO58Uk3cU2YSHryc9D50E4FdzDQ==",
       "type": "package",
@@ -3742,23 +3756,6 @@
         "microsoft.ml.vision.5.0.0.nupkg.sha512",
         "microsoft.ml.vision.nuspec",
         "mlnetlogo.png"
-      ]
-    },
-    "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
-      "type": "package",
-      "path": "microsoft.netcore.platforms/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.2.0.0.nupkg.sha512",
-        "microsoft.netcore.platforms.nuspec",
-        "runtime.json",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "Microsoft.OpenApi/2.0.0": {
@@ -3813,26 +3810,6 @@
         "lib/net8.0/manifest.spdx.json",
         "microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512",
         "microsoft.visualstudio.solutionpersistence.nuspec"
-      ]
-    },
-    "Microsoft.Win32.SystemEvents/4.5.0": {
-      "sha512": "LuI1oG+24TUj1ZRQQjM5Ew73BKnZE5NZ/7eAdh1o8ST5dPhUnJvIkiIn2re3MwnkRy6ELRnvEbBxHP8uALKhJw==",
-      "type": "package",
-      "path": "microsoft.win32.systemevents/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Win32.SystemEvents.dll",
-        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
-        "microsoft.win32.systemevents.4.5.0.nupkg.sha512",
-        "microsoft.win32.systemevents.nuspec",
-        "ref/net461/Microsoft.Win32.SystemEvents.dll",
-        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "MongoDB.Bson/3.10.0": {
@@ -3996,6 +3973,28 @@
         "lib/netstandard2.1/SharpCompress.dll",
         "sharpcompress.0.48.1.nupkg.sha512",
         "sharpcompress.nuspec"
+      ]
+    },
+    "SixLabors.ImageSharp/2.1.11": {
+      "sha512": "tUvsejgzUmEbES114yLseRxmFiYlQbH5RyaYXUQsEL7ksDo1/kW+ZL1EfD6iSUfxj7LHU8p110oFvSrRfsaWSQ==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/2.1.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/SixLabors.ImageSharp.dll",
+        "lib/net472/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp3.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp3.1/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.0/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.0/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.1/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.1/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.2.1.11.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
       ]
     },
     "SkiaSharp/2.88.8": {
@@ -4400,43 +4399,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Drawing.Common/4.5.0": {
-      "sha512": "AiJFxxVPdeITstiRS5aAu8+8Dpf5NawTMoapZ53Gfirml24p7HIfhjmCRxdXnmmf3IUA3AX3CcW7G73CjWxW/Q==",
+    "System.IdentityModel.Tokens.Jwt/8.22.0": {
+      "sha512": "CpXGfNhLl6EgYaOC9XYsc1p7Ci9HtAy0soHJDSBNGse647al4tTq9RDr+LQsrF4Ls79Dx7VfzN34km0W4DWPow==",
       "type": "package",
-      "path": "system.drawing.common/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net461/System.Drawing.Common.dll",
-        "lib/netstandard2.0/System.Drawing.Common.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net461/System.Drawing.Common.dll",
-        "ref/netstandard2.0/System.Drawing.Common.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
-        "system.drawing.common.4.5.0.nupkg.sha512",
-        "system.drawing.common.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.IdentityModel.Tokens.Jwt/8.19.2": {
-      "sha512": "gqhDC/icByKEutygpr+OFgAmjwTVowyzFjWB8K0q1ww8uFj5a1BQNL+QvijUl9uhq4p8OdDwcAIrjVC+eC9FVA==",
-      "type": "package",
-      "path": "system.identitymodel.tokens.jwt/8.19.2",
+      "path": "system.identitymodel.tokens.jwt/8.22.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4455,7 +4421,7 @@
         "lib/net9.0/System.IdentityModel.Tokens.Jwt.xml",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
-        "system.identitymodel.tokens.jwt.8.19.2.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.8.22.0.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
@@ -4665,18 +4631,21 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "LG.Microsoft.ML.ImageAnalytics >= 1.6.0.4",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.10",
-      "Microsoft.AspNetCore.OpenApi >= 10.0.9",
+      "Microsoft.AspNetCore.OpenApi >= 10.0.10",
       "Microsoft.EntityFrameworkCore >= 10.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.10",
       "Microsoft.ML >= 5.0.0",
       "Microsoft.ML.DataView >= 5.0.0",
       "Microsoft.ML.ImageAnalytics >= 5.0.0",
+      "Microsoft.ML.OnnxRuntime >= 1.28.0",
+      "Microsoft.ML.OnnxTransformer >= 5.0.0",
+      "Microsoft.ML.TensorFlow >= 5.0.0",
       "Microsoft.ML.Vision >= 5.0.0",
       "MongoDB.Driver >= 3.10.0",
-      "System.IdentityModel.Tokens.Jwt >= 8.19.2"
+      "SixLabors.ImageSharp >= 2.1.11",
+      "System.IdentityModel.Tokens.Jwt >= 8.22.0"
     ]
   },
   "packageFolders": {
@@ -4731,17 +4700,13 @@
         "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
-          "LG.Microsoft.ML.ImageAnalytics": {
-            "target": "Package",
-            "version": "[1.6.0.4, )"
-          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[10.0.10, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
-            "version": "[10.0.9, )"
+            "version": "[10.0.10, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -4769,6 +4734,18 @@
             "target": "Package",
             "version": "[5.0.0, )"
           },
+          "Microsoft.ML.OnnxRuntime": {
+            "target": "Package",
+            "version": "[1.28.0, )"
+          },
+          "Microsoft.ML.OnnxTransformer": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
+          "Microsoft.ML.TensorFlow": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
           "Microsoft.ML.Vision": {
             "target": "Package",
             "version": "[5.0.0, )"
@@ -4777,9 +4754,13 @@
             "target": "Package",
             "version": "[3.10.0, )"
           },
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[2.1.11, )"
+          },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",
-            "version": "[8.19.2, )"
+            "version": "[8.22.0, )"
           }
         },
         "imports": [
@@ -5226,16 +5207,6 @@
       "warningLevel": 1,
       "message": "Package 'Microsoft.OpenApi' 2.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
       "libraryId": "Microsoft.OpenApi",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1904",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Drawing.Common' 4.5.0 has a known critical severity vulnerability, https://github.com/advisories/GHSA-rxg9-xrhp-64gj",
-      "libraryId": "System.Drawing.Common",
       "targetGraphs": [
         "net10.0"
       ]

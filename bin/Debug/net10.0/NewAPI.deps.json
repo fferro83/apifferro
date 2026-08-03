@@ -8,18 +8,21 @@
     ".NETCoreApp,Version=v10.0": {
       "NewAPI/1.0.0": {
         "dependencies": {
-          "LG.Microsoft.ML.ImageAnalytics": "1.6.0.4",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.10",
-          "Microsoft.AspNetCore.OpenApi": "10.0.9",
+          "Microsoft.AspNetCore.OpenApi": "10.0.10",
           "Microsoft.EntityFrameworkCore": "10.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.10",
           "Microsoft.EntityFrameworkCore.Tools": "10.0.10",
           "Microsoft.ML": "5.0.0",
           "Microsoft.ML.DataView": "5.0.0",
           "Microsoft.ML.ImageAnalytics": "5.0.0",
+          "Microsoft.ML.OnnxRuntime": "1.28.0",
+          "Microsoft.ML.OnnxTransformer": "5.0.0",
+          "Microsoft.ML.TensorFlow": "5.0.0",
           "Microsoft.ML.Vision": "5.0.0",
           "MongoDB.Driver": "3.10.0",
-          "System.IdentityModel.Tokens.Jwt": "8.19.2"
+          "SixLabors.ImageSharp": "2.1.11",
+          "System.IdentityModel.Tokens.Jwt": "8.22.0"
         },
         "runtime": {
           "NewAPI.dll": {}
@@ -75,24 +78,6 @@
           }
         }
       },
-      "LG.Microsoft.ML/1.6.0.4": {
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.3",
-          "System.CodeDom": "9.0.4"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.ML.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.600.21.45201"
-          }
-        }
-      },
-      "LG.Microsoft.ML.ImageAnalytics/1.6.0.4": {
-        "dependencies": {
-          "LG.Microsoft.ML": "1.6.0.4",
-          "System.Drawing.Common": "4.5.0"
-        }
-      },
       "MethodBoundaryAspect.Fody/2.0.148": {
         "runtime": {
           "lib/netstandard2.0/MethodBoundaryAspect.dll": {
@@ -112,14 +97,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/10.0.9": {
+      "Microsoft.AspNetCore.OpenApi/10.0.10": {
         "dependencies": {
           "Microsoft.OpenApi": "2.0.0"
         },
         "runtime": {
           "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "assemblyVersion": "10.0.9.0",
-            "fileVersion": "10.0.926.27113"
+            "assemblyVersion": "10.0.10.0",
+            "fileVersion": "10.0.1026.32716"
           }
         }
       },
@@ -425,7 +410,7 @@
           "Azure.Identity": "1.14.2",
           "Microsoft.Bcl.Cryptography": "10.0.2",
           "Microsoft.Data.SqlClient.SNI.runtime": "6.0.2",
-          "Microsoft.IdentityModel.JsonWebTokens": "8.19.2",
+          "Microsoft.IdentityModel.JsonWebTokens": "8.22.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.19.2",
           "Microsoft.SqlServer.Server": "1.0.0",
           "System.Configuration.ConfigurationManager": "9.0.4"
@@ -587,7 +572,7 @@
       },
       "Microsoft.Identity.Client/4.73.1": {
         "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "8.19.2"
+          "Microsoft.IdentityModel.Abstractions": "8.22.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.Identity.Client.dll": {
@@ -608,39 +593,39 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Abstractions/8.19.2": {
+      "Microsoft.IdentityModel.Abstractions/8.22.0": {
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Abstractions.dll": {
-            "assemblyVersion": "8.19.2.0",
-            "fileVersion": "8.19.2.26195"
+            "assemblyVersion": "8.22.0.0",
+            "fileVersion": "8.22.0.26208"
           }
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/8.19.2": {
+      "Microsoft.IdentityModel.JsonWebTokens/8.22.0": {
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "8.19.2"
+          "Microsoft.IdentityModel.Tokens": "8.22.0"
         },
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
-            "assemblyVersion": "8.19.2.0",
-            "fileVersion": "8.19.2.26195"
+            "assemblyVersion": "8.22.0.0",
+            "fileVersion": "8.22.0.26208"
           }
         }
       },
-      "Microsoft.IdentityModel.Logging/8.19.2": {
+      "Microsoft.IdentityModel.Logging/8.22.0": {
         "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "8.19.2"
+          "Microsoft.IdentityModel.Abstractions": "8.22.0"
         },
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Logging.dll": {
-            "assemblyVersion": "8.19.2.0",
-            "fileVersion": "8.19.2.26195"
+            "assemblyVersion": "8.22.0.0",
+            "fileVersion": "8.22.0.26208"
           }
         }
       },
       "Microsoft.IdentityModel.Protocols/8.19.2": {
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "8.19.2"
+          "Microsoft.IdentityModel.Tokens": "8.22.0"
         },
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Protocols.dll": {
@@ -652,7 +637,7 @@
       "Microsoft.IdentityModel.Protocols.OpenIdConnect/8.19.2": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols": "8.19.2",
-          "System.IdentityModel.Tokens.Jwt": "8.19.2"
+          "System.IdentityModel.Tokens.Jwt": "8.22.0"
         },
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
@@ -661,15 +646,15 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Tokens/8.19.2": {
+      "Microsoft.IdentityModel.Tokens/8.22.0": {
         "dependencies": {
           "Microsoft.Bcl.Cryptography": "10.0.2",
-          "Microsoft.IdentityModel.Logging": "8.19.2"
+          "Microsoft.IdentityModel.Logging": "8.22.0"
         },
         "runtime": {
           "lib/net10.0/Microsoft.IdentityModel.Tokens.dll": {
-            "assemblyVersion": "8.19.2.0",
-            "fileVersion": "8.19.2.26195"
+            "assemblyVersion": "8.22.0.0",
+            "fileVersion": "8.22.0.26208"
           }
         }
       },
@@ -812,6 +797,116 @@
           }
         }
       },
+      "Microsoft.ML.OnnxRuntime/1.28.0": {
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime.Managed": "1.28.0"
+        },
+        "runtimeTargets": {
+          "runtimes/android/native/onnxruntime.aar": {
+            "rid": "android",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/ios/native/onnxruntime.xcframework.zip": {
+            "rid": "ios",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libonnxruntime.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libonnxruntime_providers_shared.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libonnxruntime.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libonnxruntime_providers_shared.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libonnxruntime.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/onnxruntime.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.28.0.724"
+          },
+          "runtimes/win-arm64/native/onnxruntime.lib": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/onnxruntime_providers_shared.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.28.0.724"
+          },
+          "runtimes/win-arm64/native/onnxruntime_providers_shared.lib": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/onnxruntime.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.28.0.724"
+          },
+          "runtimes/win-x64/native/onnxruntime.lib": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/onnxruntime_providers_shared.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.28.0.724"
+          },
+          "runtimes/win-x64/native/onnxruntime_providers_shared.lib": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Microsoft.ML.OnnxRuntime.Managed/1.28.0": {
+        "dependencies": {
+          "System.Numerics.Tensors": "9.0.4"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.ML.OnnxRuntime.dll": {
+            "assemblyVersion": "1.28.0.0",
+            "fileVersion": "1.28.0.0"
+          }
+        }
+      },
+      "Microsoft.ML.OnnxTransformer/5.0.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.30.2",
+          "Microsoft.Bcl.AsyncInterfaces": "9.0.4",
+          "Microsoft.ML": "5.0.0",
+          "Microsoft.ML.OnnxRuntime.Managed": "1.28.0",
+          "Newtonsoft.Json": "13.0.3",
+          "System.CodeDom": "9.0.4",
+          "System.Numerics.Tensors": "9.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.OnnxTransformer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "5.0.25.55704"
+          }
+        }
+      },
       "Microsoft.ML.TensorFlow/5.0.0": {
         "dependencies": {
           "Google.Protobuf": "3.30.2",
@@ -866,22 +961,6 @@
           "lib/net8.0/Microsoft.VisualStudio.SolutionPersistence.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.52.6595"
-          }
-        }
-      },
-      "Microsoft.Win32.SystemEvents/4.5.0": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.6.26515.6"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.6.26515.6"
           }
         }
       },
@@ -962,6 +1041,14 @@
           "lib/net10.0/SharpCompress.dll": {
             "assemblyVersion": "0.48.1.0",
             "fileVersion": "0.48.1.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/2.1.11": {
+        "runtime": {
+          "lib/netcoreapp3.1/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.11.0"
           }
         }
       },
@@ -1130,40 +1217,15 @@
           }
         }
       },
-      "System.Drawing.Common/4.5.0": {
+      "System.IdentityModel.Tokens.Jwt/8.22.0": {
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Drawing.Common.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.6.26515.6"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll": {
-            "rid": "unix",
-            "assetType": "runtime",
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.6.26515.6"
-          },
-          "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.6.26515.6"
-          }
-        }
-      },
-      "System.IdentityModel.Tokens.Jwt/8.19.2": {
-        "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "8.19.2",
-          "Microsoft.IdentityModel.Tokens": "8.19.2"
+          "Microsoft.IdentityModel.JsonWebTokens": "8.22.0",
+          "Microsoft.IdentityModel.Tokens": "8.22.0"
         },
         "runtime": {
           "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll": {
-            "assemblyVersion": "8.19.2.0",
-            "fileVersion": "8.19.2.26195"
+            "assemblyVersion": "8.22.0.0",
+            "fileVersion": "8.22.0.26208"
           }
         }
       },
@@ -1256,20 +1318,6 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "LG.Microsoft.ML/1.6.0.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-GrUwj2hkM0OPtZUWhcCwrcHCGOUbcmSU/Yrqn9TVVwXLbgWs2ixRYEA/TcaE5j9CQqQ+Fm7fyGeSdG1r8E8PpQ==",
-      "path": "lg.microsoft.ml/1.6.0.4",
-      "hashPath": "lg.microsoft.ml.1.6.0.4.nupkg.sha512"
-    },
-    "LG.Microsoft.ML.ImageAnalytics/1.6.0.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2erYj5Kst/3s6VubBzdJ9QB3SEQjMxARTinoIHSf7EkEfw2Qk3GAW4JvNjjTNqcost7J+o1W33C7PNnZCu3tjw==",
-      "path": "lg.microsoft.ml.imageanalytics/1.6.0.4",
-      "hashPath": "lg.microsoft.ml.imageanalytics.1.6.0.4.nupkg.sha512"
-    },
     "MethodBoundaryAspect.Fody/2.0.148": {
       "type": "package",
       "serviceable": true,
@@ -1284,12 +1332,12 @@
       "path": "microsoft.aspnetcore.authentication.jwtbearer/10.0.10",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.10.0.10.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.OpenApi/10.0.9": {
+    "Microsoft.AspNetCore.OpenApi/10.0.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1ihb8FO9cGgEK1/m3CTtT/SfnynwmiZib0W2pcDVj3KSWk/Sca4VOXEtaptKQc582zpFrzTFiwkGRCglt6H+WQ==",
-      "path": "microsoft.aspnetcore.openapi/10.0.9",
-      "hashPath": "microsoft.aspnetcore.openapi.10.0.9.nupkg.sha512"
+      "sha512": "sha512-d4Atx9IHq7JgX0F/h7Db+m9zAUzC+cKdI9k+OWnnyQIOUQtfvjIEuhvbjPigVMkAmPUgCbJ8Yp6M9ghUqHtJSQ==",
+      "path": "microsoft.aspnetcore.openapi/10.0.10",
+      "hashPath": "microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/9.0.4": {
       "type": "package",
@@ -1424,26 +1472,26 @@
       "path": "microsoft.identity.client.extensions.msal/4.73.1",
       "hashPath": "microsoft.identity.client.extensions.msal.4.73.1.nupkg.sha512"
     },
-    "Microsoft.IdentityModel.Abstractions/8.19.2": {
+    "Microsoft.IdentityModel.Abstractions/8.22.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HJbo/lnSfNHUfphPRT910poQc4T2/9+8svFLvzuaYHGAOJ2Tu+oEDqpX0BVP3BJ4OuUM1kylEKyaiX2fCAK3Cw==",
-      "path": "microsoft.identitymodel.abstractions/8.19.2",
-      "hashPath": "microsoft.identitymodel.abstractions.8.19.2.nupkg.sha512"
+      "sha512": "sha512-LU3V3owsu4vGpCg2kyL7SsQEuHwcoJ8FSNBqzLADzCf3/PcKUTcx5Plsd51DoTJMfK/WigXV/03UhaN5JXE6uQ==",
+      "path": "microsoft.identitymodel.abstractions/8.22.0",
+      "hashPath": "microsoft.identitymodel.abstractions.8.22.0.nupkg.sha512"
     },
-    "Microsoft.IdentityModel.JsonWebTokens/8.19.2": {
+    "Microsoft.IdentityModel.JsonWebTokens/8.22.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ui3fuBT4fs8kdKfBthI4NzLYIBIneEVS8UrL1JVBzAn80UiKmngBBi0BEByE7n/9c+EElcfFlCMFFTqpkBSLNA==",
-      "path": "microsoft.identitymodel.jsonwebtokens/8.19.2",
-      "hashPath": "microsoft.identitymodel.jsonwebtokens.8.19.2.nupkg.sha512"
+      "sha512": "sha512-kv6peMLjALZLDAy2H3F77KjVRdwiscn2p/g3ui2chcbuEcAX2MpAbyDcYnJ7Vyh8jZ1aJWrniUMCDWoOgnu4NQ==",
+      "path": "microsoft.identitymodel.jsonwebtokens/8.22.0",
+      "hashPath": "microsoft.identitymodel.jsonwebtokens.8.22.0.nupkg.sha512"
     },
-    "Microsoft.IdentityModel.Logging/8.19.2": {
+    "Microsoft.IdentityModel.Logging/8.22.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-r5YLDIxGOnkVJHrqXv/iD1FM1CgGrQOdriXuvuWvTPmKbnGANhEysq9XKmN6IHjf2a+9bAGEpnoRBsAQlvJU5w==",
-      "path": "microsoft.identitymodel.logging/8.19.2",
-      "hashPath": "microsoft.identitymodel.logging.8.19.2.nupkg.sha512"
+      "sha512": "sha512-G9Tl0yXSlr2pkXv4EpXjO16M4q6oo9N/od+gNyOusZ8yM8LZg1H3f/QOMFuOJiV6znzY5MkAREU97JRRnqpEQw==",
+      "path": "microsoft.identitymodel.logging/8.22.0",
+      "hashPath": "microsoft.identitymodel.logging.8.22.0.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Protocols/8.19.2": {
       "type": "package",
@@ -1459,12 +1507,12 @@
       "path": "microsoft.identitymodel.protocols.openidconnect/8.19.2",
       "hashPath": "microsoft.identitymodel.protocols.openidconnect.8.19.2.nupkg.sha512"
     },
-    "Microsoft.IdentityModel.Tokens/8.19.2": {
+    "Microsoft.IdentityModel.Tokens/8.22.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GtPC1S02uH1gOO4fQ+zRysIicKmEXaYFP8PIkdJYXqMyruYhopre4ozVHp0XiDSA0+GJvOZH9prxCPvgBMg4Ww==",
-      "path": "microsoft.identitymodel.tokens/8.19.2",
-      "hashPath": "microsoft.identitymodel.tokens.8.19.2.nupkg.sha512"
+      "sha512": "sha512-i4lywKKUuVmheCUA+w/q8QNPReNI0qanHI9hhz48AFqD1ljyb8sxPL2RbXOGiPV13XdJ4kxieL9ukS7tD43LxA==",
+      "path": "microsoft.identitymodel.tokens/8.22.0",
+      "hashPath": "microsoft.identitymodel.tokens.8.22.0.nupkg.sha512"
     },
     "Microsoft.ML/5.0.0": {
       "type": "package",
@@ -1493,6 +1541,27 @@
       "sha512": "sha512-20cFTbIlLsl+xaKANdW5tMF6rwHWcoqDmF2taxtRdmheuwv7DDlVTMhZJSs87kvWMuAg8yBXmclWe0S8ORWDVw==",
       "path": "microsoft.ml.imageanalytics/5.0.0",
       "hashPath": "microsoft.ml.imageanalytics.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.ML.OnnxRuntime/1.28.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xpguSCrXBe5E1l1088S7UqnI36EHaTL6CJMHEhwfGBoSwyPH5Q/IkbkBBk/GwXWzsVyEXpQm42ZimSAQs0/zKA==",
+      "path": "microsoft.ml.onnxruntime/1.28.0",
+      "hashPath": "microsoft.ml.onnxruntime.1.28.0.nupkg.sha512"
+    },
+    "Microsoft.ML.OnnxRuntime.Managed/1.28.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4ecKjwASHhAZXczK/xm5KU6MdvoIGfMd23UAwDbM9vfcfgqZgNqvFWPZPT0Elc1wu5vXWs2Kij1ZBmHCcv1UlA==",
+      "path": "microsoft.ml.onnxruntime.managed/1.28.0",
+      "hashPath": "microsoft.ml.onnxruntime.managed.1.28.0.nupkg.sha512"
+    },
+    "Microsoft.ML.OnnxTransformer/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nKhZGsa+CS546GyxNaetoCWHpyrkbythSFb6QXUMPPGjGQN41Y/sxIi2AH8uOUvZaa/lU9dlGj5p1NpMUzI8Ng==",
+      "path": "microsoft.ml.onnxtransformer/5.0.0",
+      "hashPath": "microsoft.ml.onnxtransformer.5.0.0.nupkg.sha512"
     },
     "Microsoft.ML.TensorFlow/5.0.0": {
       "type": "package",
@@ -1528,13 +1597,6 @@
       "sha512": "sha512-oNv2JtYXhpdJrX63nibx1JT3uCESOBQ1LAk7Dtz/sr0+laW0KRM6eKp4CZ3MHDR2siIkKsY8MmUkeP5DKkQQ5w==",
       "path": "microsoft.visualstudio.solutionpersistence/1.0.52",
       "hashPath": "microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512"
-    },
-    "Microsoft.Win32.SystemEvents/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-LuI1oG+24TUj1ZRQQjM5Ew73BKnZE5NZ/7eAdh1o8ST5dPhUnJvIkiIn2re3MwnkRy6ELRnvEbBxHP8uALKhJw==",
-      "path": "microsoft.win32.systemevents/4.5.0",
-      "hashPath": "microsoft.win32.systemevents.4.5.0.nupkg.sha512"
     },
     "MongoDB.Bson/3.10.0": {
       "type": "package",
@@ -1591,6 +1653,13 @@
       "sha512": "sha512-SqGaVniGG943Gph/gHhUQUiZPyC7y0tXZyMf0/B2oGsMav9dqs7JJOuUA+xOkwKYaWM2TM7aZQjNK91f4bX71A==",
       "path": "sharpcompress/0.48.1",
       "hashPath": "sharpcompress.0.48.1.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/2.1.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tUvsejgzUmEbES114yLseRxmFiYlQbH5RyaYXUQsEL7ksDo1/kW+ZL1EfD6iSUfxj7LHU8p110oFvSrRfsaWSQ==",
+      "path": "sixlabors.imagesharp/2.1.11",
+      "hashPath": "sixlabors.imagesharp.2.1.11.nupkg.sha512"
     },
     "SkiaSharp/2.88.8": {
       "type": "package",
@@ -1690,19 +1759,12 @@
       "path": "system.configuration.configurationmanager/9.0.4",
       "hashPath": "system.configuration.configurationmanager.9.0.4.nupkg.sha512"
     },
-    "System.Drawing.Common/4.5.0": {
+    "System.IdentityModel.Tokens.Jwt/8.22.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AiJFxxVPdeITstiRS5aAu8+8Dpf5NawTMoapZ53Gfirml24p7HIfhjmCRxdXnmmf3IUA3AX3CcW7G73CjWxW/Q==",
-      "path": "system.drawing.common/4.5.0",
-      "hashPath": "system.drawing.common.4.5.0.nupkg.sha512"
-    },
-    "System.IdentityModel.Tokens.Jwt/8.19.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-gqhDC/icByKEutygpr+OFgAmjwTVowyzFjWB8K0q1ww8uFj5a1BQNL+QvijUl9uhq4p8OdDwcAIrjVC+eC9FVA==",
-      "path": "system.identitymodel.tokens.jwt/8.19.2",
-      "hashPath": "system.identitymodel.tokens.jwt.8.19.2.nupkg.sha512"
+      "sha512": "sha512-CpXGfNhLl6EgYaOC9XYsc1p7Ci9HtAy0soHJDSBNGse647al4tTq9RDr+LQsrF4Ls79Dx7VfzN34km0W4DWPow==",
+      "path": "system.identitymodel.tokens.jwt/8.22.0",
+      "hashPath": "system.identitymodel.tokens.jwt.8.22.0.nupkg.sha512"
     },
     "System.Memory.Data/8.0.1": {
       "type": "package",
