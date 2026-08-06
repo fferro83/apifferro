@@ -152,6 +152,13 @@ const labels = L.tileLayer(
 imagery.addTo(map);
 labels.addTo(map);
 
+// Fix Leaflet map when accordion opens
+document.getElementById("collapsePredict").addEventListener("shown.bs.collapse", () => {
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 200);
+});
+
 function addMarker(lat, lng, label, needsMaintenance) {
     const color = needsMaintenance ? "red" : "green";
     L.circleMarker([lat, lng], { radius: 8, color }).addTo(map)
