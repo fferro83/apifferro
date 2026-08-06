@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,8 +54,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAgwBUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T23:15:17.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T23:15:17.034Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Services\\ImageClassificationService.cs",
               "ViewState": "AgIAAGkAAAAAAAAAAAAAwIUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T23:14:16.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T23:14:16.353Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-03T23:13:58.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T23:13:58.3Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "RelativeToolTip": "Controllers\\ImageController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAADwvzUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T22:59:49.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T22:59:49.439Z"
             },
             {
               "$type": "Document",
@@ -106,16 +102,11 @@
               "RelativeToolTip": "Data\\sample-data.csv",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2026-08-03T22:20:03.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+              "WhenOpened": "2026-08-03T22:20:03.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "app.js",
               "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\js\\app.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\app.js",
@@ -128,13 +119,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAFMAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAiwK8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-08-03T21:42:23.709Z",
               "EditorCaption": ""
@@ -149,8 +140,7 @@
               "RelativeToolTip": "Services\\PredictionService.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAowDsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T21:39:11.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-03T21:39:11.475Z"
             }
           ]
         }
