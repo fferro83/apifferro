@@ -104,11 +104,31 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
     }
 });
 
-// --- Map setup ---
+// 1. Inicializa el mapa primero
 const map = L.map("map").setView([37.9101, -122.0652], 13);
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "&copy; OpenStreetMap contributors"
-}).addTo(map);
+
+// 2. Esri Imagery
+const imagery = L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    {
+        attribution: "Tiles © Esri — Source: Esri, Maxar, Earthstar Geographics",
+        maxZoom: 20
+    }
+);
+
+// 3. Esri Hybrid Labels
+const labels = L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
+    {
+        attribution: "Labels © Esri",
+        maxZoom: 20
+    }
+);
+
+// 4. Agrega ambas capas al mapa
+imagery.addTo(map);
+labels.addTo(map);
+
 
 function addMarker(lat, lng, label, needsMaintenance) {
     const color = needsMaintenance ? "red" : "green";
