@@ -32,6 +32,7 @@ document.getElementById("predictForm").addEventListener("submit", async (e) => {
 });
 
 // --- Image form ---
+// --- Image form ---
 document.getElementById("imageForm").addEventListener("submit", async (e) => {
     e.preventDefault();
     const fileInput = document.getElementById("imageFile");
@@ -42,11 +43,14 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
     formData.append("file", file);
     formData.append("expectedAssetType", expectedType);
 
-    const resultDiv = document.getElementById("imageResult");
-    const listDiv = document.getElementById("detectionsList");
-    resultDiv.classList.remove("d-none");
-    resultDiv.textContent = "Classifying...";
-    listDiv.innerHTML = "";
+    const panel = document.getElementById("imageAnalysisPanel");
+    const resultPanel = document.getElementById("imageResultPanel");
+    const detectionsPanel = document.getElementById("detectionsPanel");
+
+    panel.classList.remove("d-none");
+    resultPanel.textContent = "Classifying...";
+    detectionsPanel.innerHTML = "";
+
 
     try {
         const res = await fetch(`${API_BASE}/api/image/predict`, {
@@ -59,7 +63,7 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
         const img = new Image();
         img.onload = () => {
             const canvas = document.getElementById("imageCanvas");
-            canvas.classList.remove("d-none"); // ✅ show it now that we have a result
+            canvas.classList.remove("d-none");
             canvas.width = img.width;
             canvas.height = img.height;
             const ctx = canvas.getContext("2d");
@@ -86,26 +90,29 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
         };
         img.src = URL.createObjectURL(file);
 
-        if (data.detectionCount === 0) {
-            document.getElementById("imageResultPopup").textContent = "No findings detected in this photo.";
-            document.getElementById("detectionsPopup").innerHTML = "";
+        // ⭐ NEW: Replace popup with scrollable panel
+        const panel = document.getElementById("imageAnalysisPanel");
+        const panelResult = document.getElementById("imageResultPanel");
+        const panelDetections = document.getElementById("detectionsPanel");
 
-            const modal = new bootstrap.Modal(document.getElementById("imageResultModal"));
-            modal.show();
+        panel.classList.remove("d-none");
+
+        if (data.detectionCount === 0) {
+            panelResult.textContent = "No findings detected in this photo.";
+            panelDetections.innerHTML = "";
             return;
         }
+
         let html = "<ul>";
         data.detections.forEach(det => {
-            html += `<li>${det.label} — ${det.confidence.toFixed(2)}%</li>`;
+            const name = det.label || det.class || "Unknown";
+            const score = det.confidence || 0;
+            html += `<li>${name} — ${(score * 100).toFixed(2)}%</li>`;
         });
         html += "</ul>";
 
-        document.getElementById("imageResultPopup").textContent = "Asset Discrepancy:";
-        document.getElementById("detectionsPopup").innerHTML = html;
-
-        const modal = new bootstrap.Modal(document.getElementById("imageResultModal"));
-        modal.show();
-
+        panelResult.textContent = "Asset Discrepancy:";
+        panelDetections.innerHTML = html;
 
         resultDiv.textContent = `Found ${data.detectionCount} Findings detected:`;
         listDiv.innerHTML = data.detections.map(d => `
