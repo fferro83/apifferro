@@ -87,11 +87,27 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
         img.src = URL.createObjectURL(file);
 
         if (data.detectionCount === 0) {
-            resultDiv.textContent = "No objects detected in this photo.";
+            document.getElementById("imageResultPopup").textContent = "No findings detected in this photo.";
+            document.getElementById("detectionsPopup").innerHTML = "";
+
+            const modal = new bootstrap.Modal(document.getElementById("imageResultModal"));
+            modal.show();
             return;
         }
+        let html = "<ul>";
+        data.detections.forEach(det => {
+            html += `<li>${det.label} — ${det.confidence.toFixed(2)}%</li>`;
+        });
+        html += "</ul>";
 
-        resultDiv.textContent = `Found ${data.detectionCount} object(s)`;
+        document.getElementById("imageResultPopup").textContent = "Asset Discrepancy:";
+        document.getElementById("detectionsPopup").innerHTML = html;
+
+        const modal = new bootstrap.Modal(document.getElementById("imageResultModal"));
+        modal.show();
+
+
+        resultDiv.textContent = `Found ${data.detectionCount} Findings detected:`;
         listDiv.innerHTML = data.detections.map(d => `
             <div class="d-flex justify-content-between align-items-center border rounded px-3 py-2 mb-2">
                 <span class="fw-semibold text-capitalize">${d.class}</span>

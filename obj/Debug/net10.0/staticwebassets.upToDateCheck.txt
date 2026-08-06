@@ -1,0 +1,6 @@
+wwwroot\css\style.css
+wwwroot\index.html
+wwwroot\js\app.js
+C:\Users\fcofe\source\repos\NewAPI\wwwroot\css\style.css
+C:\Users\fcofe\source\repos\NewAPI\wwwroot\index.html
+C:\Users\fcofe\source\repos\NewAPI\wwwroot\js\app.js
