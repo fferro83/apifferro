@@ -8,8 +8,9 @@ namespace NewAPI.Services
     {
         private readonly MLContext _mlContext;
         private ITransformer _model;
-        private readonly string _modelPath = "Models/TrainedModel.zip";
-        private readonly string _dataPath = "Data/sample-data.csv";
+        private readonly string _modelPath = Path.Combine(AppContext.BaseDirectory, "Models", "TrainedModel.zip");
+        private readonly string _dataPath = Path.Combine(AppContext.BaseDirectory, "Data", "sample-data.csv");
+
 
         public PredictionService()
         {
