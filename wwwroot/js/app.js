@@ -107,7 +107,7 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
 // 1. Inicializa el mapa primero
 const map = L.map("map").setView([37.9101, -122.0652], 13);
 
-// 2. Esri Imagery
+// 2. Esri World Imagery
 const imagery = L.tileLayer(
     "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     {
@@ -128,7 +128,6 @@ const labels = L.tileLayer(
 // 4. Agrega ambas capas al mapa
 imagery.addTo(map);
 labels.addTo(map);
-
 
 function addMarker(lat, lng, label, needsMaintenance) {
     const color = needsMaintenance ? "red" : "green";
