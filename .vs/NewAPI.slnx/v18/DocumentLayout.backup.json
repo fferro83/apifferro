@@ -42,8 +42,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\js\\app.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\app.js",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\js\\app.js",
+              "RelativeToolTip": "wwwroot\\js\\app.js",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAJkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-08-03T21:42:44.137Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -52,7 +65,7 @@
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAiwHUAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAG0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-08-03T21:42:23.709Z",
               "EditorCaption": ""
@@ -104,18 +117,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
               "WhenOpened": "2026-08-03T22:20:03.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "app.js",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\js\\app.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\app.js",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\js\\app.js",
-              "RelativeToolTip": "wwwroot\\js\\app.js",
-              "ViewState": "AgIAACIAAAAAAAAAAAAwwDkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-08-03T21:42:44.137Z"
             },
             {
               "$type": "Document",
