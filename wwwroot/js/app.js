@@ -70,12 +70,12 @@ document.getElementById("predictForm").addEventListener("submit", async (e) => {
         `;
 
         addMarker(payload.latitude, payload.longitude, payload.assetId, data.needsMaintenance);
+        logAssetForRouting(payload, data);
     } catch (err) {
         resultDiv.textContent = "Error: " + err.message;
     }
 });
 
-// --- Image form ---
 // --- Image form ---
 document.getElementById("imageForm").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -94,7 +94,6 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
     panel.classList.remove("d-none");
     resultPanel.textContent = "Classifying...";
     detectionsPanel.innerHTML = "";
-
 
     try {
         const res = await fetch(`${API_BASE}/api/image/predict`, {
@@ -134,16 +133,9 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
         };
         img.src = URL.createObjectURL(file);
 
-        // ⭐ NEW: Replace popup with scrollable panel
-        const panel = document.getElementById("imageAnalysisPanel");
-        const panelResult = document.getElementById("imageResultPanel");
-        const panelDetections = document.getElementById("detectionsPanel");
-
-        panel.classList.remove("d-none");
-
         if (data.detectionCount === 0) {
-            panelResult.textContent = "No findings detected in this photo.";
-            panelDetections.innerHTML = "";
+            resultPanel.textContent = "No findings detected in this photo.";
+            detectionsPanel.innerHTML = "";
             return;
         }
 
@@ -155,26 +147,17 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
         });
         html += "</ul>";
 
-        panelResult.textContent = "Asset Discrepancy:";
-        panelDetections.innerHTML = html;
-
-        resultDiv.textContent = `Found ${data.detectionCount} Findings detected:`;
-        listDiv.innerHTML = data.detections.map(d => `
-            <div class="d-flex justify-content-between align-items-center border rounded px-3 py-2 mb-2">
-                <span class="fw-semibold text-capitalize">${d.class}</span>
-                <span class="badge bg-primary">${(d.confidence * 100).toFixed(1)}%</span>
-            </div>
-        `).join("");
+        resultPanel.textContent = "Asset Discrepancy:";
+        detectionsPanel.innerHTML = html;
 
     } catch (err) {
-        resultDiv.textContent = "Error: " + err.message;
+        resultPanel.textContent = "Error: " + err.message;
     }
 });
 
-// 1. Inicializa el mapa primero
+// --- Map setup ---
 const map = L.map("map").setView([37.9101, -122.0652], 13);
 
-// 2. Esri World Imagery
 const imagery = L.tileLayer(
     "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     {
@@ -183,7 +166,6 @@ const imagery = L.tileLayer(
     }
 );
 
-// 3. Esri Hybrid Labels
 const labels = L.tileLayer(
     "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
     {
@@ -192,7 +174,6 @@ const labels = L.tileLayer(
     }
 );
 
-// 4. Agrega ambas capas al mapa
 imagery.addTo(map);
 labels.addTo(map);
 
@@ -209,3 +190,183 @@ function addMarker(lat, lng, label, needsMaintenance) {
         .bindPopup(`${label} — ${needsMaintenance ? "Needs Maintenance" : "OK"}`)
         .openPopup();
 }
+
+// --- Route planning (priority order) ---
+const assetLog = [];
+
+function logAssetForRouting(payload, data) {
+    assetLog.push({
+        assetId: payload.assetId,
+        lat: payload.latitude,
+        lon: payload.longitude,
+        priorityScore: data.priorityScore,
+        priorityLevel: data.priorityLevel
+    });
+}
+
+
+let routeLayer = null;
+let userLocationMarker = null;
+
+function getUserLocation() {
+    return new Promise((resolve, reject) => {
+        if (!navigator.geolocation) {
+            reject(new Error("Geolocation is not supported by your browser."));
+            return;
+        }
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                resolve({
+                    lat: position.coords.latitude,
+                    lon: position.coords.longitude
+                });
+            },
+            (error) => {
+                reject(new Error("Could not get your location: " + error.message));
+            }
+        );
+    });
+}
+
+function formatManeuver(maneuver, streetName) {
+    const type = maneuver.type;
+    const modifier = maneuver.modifier;
+
+    switch (type) {
+        case "depart":
+            return `Head out onto <strong>${streetName}</strong>`;
+        case "arrive":
+            return `Arrive at destination`;
+        case "turn":
+            return `Turn ${modifier} onto <strong>${streetName}</strong>`;
+        case "continue":
+            return `Continue on <strong>${streetName}</strong>`;
+        case "merge":
+            return `Merge onto <strong>${streetName}</strong>`;
+        case "on ramp":
+            return `Take the ramp onto <strong>${streetName}</strong>`;
+        case "off ramp":
+            return `Take the exit onto <strong>${streetName}</strong>`;
+        case "fork":
+            return `Keep ${modifier} at the fork onto <strong>${streetName}</strong>`;
+        case "roundabout":
+            return `Enter the roundabout, take exit onto <strong>${streetName}</strong>`;
+        default:
+            return streetName ? `Continue onto <strong>${streetName}</strong>` : null;
+    }
+}
+
+async function planPriorityRoute() {
+    const summaryDiv = document.getElementById("routeSummary");
+
+    if (assetLog.length < 1) {
+        summaryDiv.classList.remove("d-none");
+        summaryDiv.textContent = "Need at least 1 predicted asset to plan a route. Run a prediction first.";
+        return;
+    }
+
+    summaryDiv.classList.remove("d-none");
+    summaryDiv.textContent = "Getting your location...";
+
+    let userLocation;
+    try {
+        userLocation = await getUserLocation();
+    } catch (err) {
+        summaryDiv.textContent = err.message;
+        return;
+    }
+
+    // Show a marker for the user's current location
+    if (userLocationMarker) map.removeLayer(userLocationMarker);
+    userLocationMarker = L.marker([userLocation.lat, userLocation.lon], {
+        icon: L.divIcon({
+            className: "",
+            html: '<div style="background:#0d6efd;width:16px;height:16px;border-radius:50%;border:3px solid white;box-shadow:0 0 4px rgba(0,0,0,0.4);"></div>',
+            iconSize: [16, 16]
+        })
+    }).addTo(map).bindPopup("Your current location").openPopup();
+
+    // Sort predicted assets by priority, highest first
+    const sortedAssets = [...assetLog].sort((a, b) => b.priorityScore - a.priorityScore);
+
+    // Build stop list: your location FIRST, then assets in priority order
+    const allStops = [
+        { lat: userLocation.lat, lon: userLocation.lon, assetId: "Your Location", priorityLevel: "" },
+        ...sortedAssets
+    ];
+
+    const coordsParam = allStops.map(a => `${a.lon},${a.lat}`).join(";");
+
+    summaryDiv.textContent = "Calculating route...";
+
+    try {
+        const url = `https://router.project-osrm.org/route/v1/driving/${coordsParam}?overview=full&geometries=geojson&steps=true`;
+
+        const res = await fetch(url);
+        const result = await res.json();
+
+        if (result.code !== "Ok") {
+            summaryDiv.textContent = "Routing error: " + result.message;
+            return;
+        }
+
+        const route = result.routes[0];
+        const totalMinutes = route.duration / 60;
+        const totalMiles = route.distance / 1609.34;
+
+        if (routeLayer) map.removeLayer(routeLayer);
+
+        const coords = route.geometry.coordinates.map(c => [c[1], c[0]]);
+        routeLayer = L.polyline(coords, { color: "#0d6efd", weight: 5, opacity: 0.8 }).addTo(map);
+        map.fitBounds(routeLayer.getBounds(), { padding: [30, 30] });
+
+        const orderList = allStops.map((a, i) =>
+            i === 0 ? "📍 You" : `${i}. ${a.assetId} (${a.priorityLevel})`
+        ).join(" → ");
+
+        summaryDiv.innerHTML = `
+            <strong>Route planned:</strong> ${totalMiles.toFixed(1)} mi, ~${Math.round(totalMinutes)} min<br>
+            <strong>Order:</strong> ${orderList}
+        `;
+
+        // Build turn-by-turn directions with street names
+        const directionsDiv = document.getElementById("turnByTurnDirections");
+        directionsDiv.classList.remove("d-none");
+
+        let stepsHtml = `<div class="card"><div class="card-body">
+            <h6 class="card-title"><i class="bi bi-signpost-split-fill me-2"></i>Turn-by-Turn Directions</h6>
+            <ol class="mb-0" style="max-height: 300px; overflow-y: auto;">`;
+
+                route.legs.forEach((leg, legIndex) => {
+                    leg.steps.forEach(step => {
+                        const streetName = step.name || "Unnamed road";
+                        const maneuver = formatManeuver(step.maneuver, streetName);
+                        const distanceMi = (step.distance / 1609.34).toFixed(2);
+
+                        if (maneuver) {
+                            stepsHtml += `<li class="mb-1">${maneuver} <span class="text-muted">(${distanceMi} mi)</span></li>`;
+                        }
+                    });
+                });
+
+                stepsHtml += `</ol></div></div>`;
+                directionsDiv.innerHTML = stepsHtml;
+
+    } catch (err) {
+        summaryDiv.textContent = "Error planning route: " + err.message;
+    }
+}
+
+document.getElementById("planRouteBtn").addEventListener("click", planPriorityRoute);
+
+function logAssetForRouting(payload, data) {
+    assetLog.push({
+        assetId: payload.assetId,
+        lat: payload.latitude,
+        lon: payload.longitude,
+        priorityScore: data.priorityScore,
+        priorityLevel: data.priorityLevel
+    });
+}
+
+// ⬇️ paste the planPriorityRoute function and event listener from above here
