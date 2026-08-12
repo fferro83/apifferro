@@ -23,7 +23,51 @@ document.getElementById("predictForm").addEventListener("submit", async (e) => {
             body: JSON.stringify(payload)
         });
         const data = await res.json();
-        resultDiv.textContent = `Needs Maintenance: ${data.needsMaintenance} | Probability: ${(data.probability * 100).toFixed(1)}%`;
+
+        const maintenanceColor = data.needsMaintenance ? "danger" : "success";
+        const maintenanceIcon = data.needsMaintenance ? "bi-exclamation-triangle-fill" : "bi-check-circle-fill";
+
+        const fireColors = {
+            "Extreme": "danger",
+            "High": "warning",
+            "Moderate": "info",
+            "Low": "success"
+        };
+        const fireColor = fireColors[data.fireDangerRating] || "secondary";
+
+        const priorityColors = {
+            "Critical": "danger",
+            "High": "warning",
+            "Medium": "info",
+            "Low": "success"
+        };
+        const priorityColor = priorityColors[data.priorityLevel] || "secondary";
+
+        resultDiv.innerHTML = `
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-flag-fill text-${priorityColor} fs-5"></i>
+                <span class="fw-semibold">Priority:</span>
+                <span class="badge bg-${priorityColor}">${data.priorityLevel} (${data.priorityScore.toFixed(0)}/100)</span>
+            </div>
+
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi ${maintenanceIcon} text-${maintenanceColor} fs-5"></i>
+                <span class="fw-semibold">Needs Maintenance:</span>
+                <span class="badge bg-${maintenanceColor}">${data.needsMaintenance ? "Yes" : "No"} (${(data.probability * 100).toFixed(1)}%)</span>
+            </div>
+
+            <div class="d-flex flex-wrap gap-3 text-muted mb-2 pt-2 border-top">
+                <span><i class="bi bi-thermometer-half text-danger me-1"></i>${data.temperatureC.toFixed(1)}°C</span>
+                <span><i class="bi bi-wind text-primary me-1"></i>${data.windSpeedKph.toFixed(1)} km/h</span>
+                <span><i class="bi bi-cloud-rain text-info me-1"></i>${data.precipitationMm.toFixed(1)} mm</span>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-fire text-${fireColor} fs-5"></i>
+                <span class="fw-semibold">Fire Risk:</span>
+                <span class="badge bg-${fireColor}">${data.fireDangerRating} (FWI: ${data.fireWeatherIndex.toFixed(1)})</span>
+            </div>
+        `;
 
         addMarker(payload.latitude, payload.longitude, payload.assetId, data.needsMaintenance);
     } catch (err) {

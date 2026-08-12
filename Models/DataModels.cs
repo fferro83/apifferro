@@ -5,12 +5,16 @@ namespace NewAPI.Models
     public class UtilityAssetData
     {
         [LoadColumn(0)] public string AssetId { get; set; }
-        [LoadColumn(1)] public string AssetType { get; set; }      // e.g. "Pole", "Transformer", "Meter"
+        [LoadColumn(1)] public string AssetType { get; set; }
         [LoadColumn(2)] public float Latitude { get; set; }
         [LoadColumn(3)] public float Longitude { get; set; }
         [LoadColumn(4)] public float AgeYears { get; set; }
         [LoadColumn(5)] public float LastInspectionMonthsAgo { get; set; }
-        [LoadColumn(6)] public bool NeedsMaintenance { get; set; }  // Label to predict
+        [LoadColumn(6)] public float TemperatureC { get; set; }      // NEW
+        [LoadColumn(7)] public float WindSpeedKph { get; set; }      // NEW
+        [LoadColumn(8)] public float PrecipitationMm { get; set; }   // NEW
+        [LoadColumn(9)] public bool NeedsMaintenance { get; set; }
+        [LoadColumn(10)] public float FireWeatherIndex { get; set; }
     }
 
     // Prediction output

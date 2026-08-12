@@ -23,9 +23,9 @@ namespace NewAPI.Controllers
         }
 
         [HttpPost("predict")]
-        public IActionResult Predict([FromBody] UtilityAssetData input)
+        public async Task<IActionResult> Predict([FromBody] UtilityAssetData input)
         {
-            var result = _service.Predict(input);
+            var result = await _service.PredictWithLiveWeatherAsync(input);
             return Ok(result);
         }
     }

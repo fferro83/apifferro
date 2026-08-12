@@ -17,6 +17,7 @@ builder.Services.AddSingleton<IMongoClient>(sp =>
 builder.Services.AddSingleton<MongoDbContext>();
 builder.Services.AddSingleton<PredictionService>();
 builder.Services.AddHttpClient<ImageClassificationService>();
+builder.Services.AddHttpClient<WeatherService>();
 
 // Add services to the container.
 builder.Services.AddControllers();
