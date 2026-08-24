@@ -14,7 +14,7 @@ namespace NewAPI.Services
 
         public async Task<(float TemperatureC, float WindSpeedKph, float PrecipitationMm)> GetCurrentWeatherAsync(float lat, float lon)
         {
-            var url = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={ApiKey}&units=metric";
+            var url = $"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={ApiKey}&units=imperial";
             var response = await _httpClient.GetAsync(url);
             response.EnsureSuccessStatusCode();
 

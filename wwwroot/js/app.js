@@ -1,20 +1,109 @@
 ﻿const API_BASE = ""; // same origin, leave empty; or set full Render URL if UI is hosted separately
 
-// --- Predict form ---
-document.getElementById("predictForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const payload = {
-        assetId: document.getElementById("assetId").value,
-        assetType: document.getElementById("assetType").value,
-        latitude: parseFloat(document.getElementById("latitude").value),
-        longitude: parseFloat(document.getElementById("longitude").value),
-        ageYears: parseFloat(document.getElementById("ageYears").value),
-        lastInspectionMonthsAgo: parseFloat(document.getElementById("lastInspection").value)
-    };
+// --- Asset catalog table: loads all assets (Data/sample-data.csv via API), read-only,
+// and runs predictions for all of them together instead of one at a time. ---
+let assetCatalog = [];              // rows returned by /api/assets/catalog
+const predictionResults = {};       // AssetId -> prediction result from /api/prediction/predict
 
-    const resultDiv = document.getElementById("predictResult");
-    resultDiv.classList.remove("d-none");
-    resultDiv.textContent = "Predicting...";
+const priorityColors = { Critical: "danger", High: "warning", Medium: "info", Low: "success" };
+const fireColors = { Extreme: "danger", High: "warning", Moderate: "info", Low: "success" };
+
+async function loadAssetCatalog() {
+    const statusDiv = document.getElementById("catalogStatus");
+    const tbody = document.getElementById("assetCatalogTableBody");
+
+    try {
+        const res = await fetch(`${API_BASE}/api/assets/catalog`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        assetCatalog = await res.json();
+        renderCatalogTable();
+    } catch (err) {
+        console.error("Could not load asset catalog:", err);
+        if (statusDiv) {
+            statusDiv.classList.remove("d-none");
+            statusDiv.textContent = "Could not load assets — check /api/assets/catalog";
+        }
+        if (tbody) {
+            tbody.innerHTML = `<tr><td colspan="12" class="text-center text-danger">Could not load assets.</td></tr>`;
+        }
+    }
+}
+
+function renderCatalogTable() {
+    const tbody = document.getElementById("assetCatalogTableBody");
+    if (!tbody) return;
+
+    if (assetCatalog.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="12" class="text-center text-muted">No assets found.</td></tr>`;
+        return;
+    }
+
+    tbody.innerHTML = assetCatalog.map(asset => {
+        const result = predictionResults[asset.AssetId];
+
+        const tempCell = result ? `<i class="bi bi-thermometer-half text-danger me-1"></i>${result.temperatureC.toFixed(1)}°F` : `<span class="text-muted">—</span>`;
+        const windCell = result ? `<i class="bi bi-wind text-primary me-1"></i>${result.windSpeedKph.toFixed(1)} miles/h` : `<span class="text-muted">—</span>`;
+        const precipCell = result ? `<i class="bi bi-cloud-rain text-info me-1"></i>${result.precipitationMm.toFixed(1)} mm` : `<span class="text-muted">—</span>`;
+
+        const priorityCell = result
+            ? `<span class="badge bg-${priorityColors[result.priorityLevel] || "secondary"}">${result.priorityLevel} (${result.priorityScore.toFixed(0)})</span>`
+            : `<span class="text-muted">—</span>`;
+
+        const maintenanceCell = result
+            ? (result.needsMaintenance ? "⚠️ Yes" : "OK")
+            : `<span class="text-muted">—</span>`;
+
+        const fireCell = result
+            ? `<span class="badge bg-${fireColors[result.fireDangerRating] || "secondary"}">${result.fireDangerRating}</span>`
+            : `<span class="text-muted">—</span>`;
+
+        return `
+            <tr data-asset-id="${asset.AssetId}">
+                <td>${asset.AssetId}</td>
+                <td>${asset.AssetType}</td>
+                <td>${asset.Latitude}</td>
+                <td>${asset.Longitude}</td>
+                <td>${asset.AgeYears}</td>
+                <td>${asset.LastInspectionMonthsAgo}</td>
+                <td class="temp-cell">${tempCell}</td>
+                <td class="wind-cell">${windCell}</td>
+                <td class="precip-cell">${precipCell}</td>
+                <td class="priority-cell">${priorityCell}</td>
+                <td class="maintenance-cell">${maintenanceCell}</td>
+                <td class="fire-cell">${fireCell}</td>
+            </tr>
+        `;
+    }).join("");
+}
+
+function setRowPredicting(assetId) {
+    const row = document.querySelector(`#assetCatalogTableBody tr[data-asset-id="${assetId}"]`);
+    if (!row) return;
+    row.querySelector(".temp-cell").innerHTML = `<span class="text-muted">...</span>`;
+    row.querySelector(".wind-cell").innerHTML = "";
+    row.querySelector(".precip-cell").innerHTML = "";
+    row.querySelector(".priority-cell").innerHTML = `<span class="text-muted">Predicting...</span>`;
+    row.querySelector(".maintenance-cell").innerHTML = "";
+    row.querySelector(".fire-cell").innerHTML = "";
+}
+
+function setRowError(assetId) {
+    const row = document.querySelector(`#assetCatalogTableBody tr[data-asset-id="${assetId}"]`);
+    if (!row) return;
+    row.querySelector(".priority-cell").innerHTML = `<span class="text-danger">Error</span>`;
+}
+
+async function runPredictionForAsset(asset) {
+    setRowPredicting(asset.AssetId);
+
+    const payload = {
+        assetId: asset.AssetId,
+        assetType: asset.AssetType,
+        latitude: parseFloat(asset.Latitude),
+        longitude: parseFloat(asset.Longitude),
+        ageYears: parseFloat(asset.AgeYears),
+        lastInspectionMonthsAgo: parseFloat(asset.LastInspectionMonthsAgo)
+    };
 
     try {
         const res = await fetch(`${API_BASE}/api/prediction/predict`, {
@@ -22,59 +111,40 @@ document.getElementById("predictForm").addEventListener("submit", async (e) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
         });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 
-        const maintenanceColor = data.needsMaintenance ? "danger" : "success";
-        const maintenanceIcon = data.needsMaintenance ? "bi-exclamation-triangle-fill" : "bi-check-circle-fill";
-
-        const fireColors = {
-            "Extreme": "danger",
-            "High": "warning",
-            "Moderate": "info",
-            "Low": "success"
-        };
-        const fireColor = fireColors[data.fireDangerRating] || "secondary";
-
-        const priorityColors = {
-            "Critical": "danger",
-            "High": "warning",
-            "Medium": "info",
-            "Low": "success"
-        };
-        const priorityColor = priorityColors[data.priorityLevel] || "secondary";
-
-        resultDiv.innerHTML = `
-            <div class="d-flex align-items-center gap-2 mb-2">
-                <i class="bi bi-flag-fill text-${priorityColor} fs-5"></i>
-                <span class="fw-semibold">Priority:</span>
-                <span class="badge bg-${priorityColor}">${data.priorityLevel} (${data.priorityScore.toFixed(0)}/100)</span>
-            </div>
-
-            <div class="d-flex align-items-center gap-2 mb-2">
-                <i class="bi ${maintenanceIcon} text-${maintenanceColor} fs-5"></i>
-                <span class="fw-semibold">Needs Maintenance:</span>
-                <span class="badge bg-${maintenanceColor}">${data.needsMaintenance ? "Yes" : "No"} (${(data.probability * 100).toFixed(1)}%)</span>
-            </div>
-
-            <div class="d-flex flex-wrap gap-3 text-muted mb-2 pt-2 border-top">
-                <span><i class="bi bi-thermometer-half text-danger me-1"></i>${data.temperatureC.toFixed(1)}°C</span>
-                <span><i class="bi bi-wind text-primary me-1"></i>${data.windSpeedKph.toFixed(1)} km/h</span>
-                <span><i class="bi bi-cloud-rain text-info me-1"></i>${data.precipitationMm.toFixed(1)} mm</span>
-            </div>
-
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-fire text-${fireColor} fs-5"></i>
-                <span class="fw-semibold">Fire Risk:</span>
-                <span class="badge bg-${fireColor}">${data.fireDangerRating} (FWI: ${data.fireWeatherIndex.toFixed(1)})</span>
-            </div>
-        `;
+        predictionResults[asset.AssetId] = data;
+        renderCatalogTable();
 
         addMarker(payload.latitude, payload.longitude, payload.assetId, data.needsMaintenance);
         logAssetForRouting(payload, data);
     } catch (err) {
-        resultDiv.textContent = "Error: " + err.message;
+        console.error(`Prediction failed for ${asset.AssetId}:`, err);
+        setRowError(asset.AssetId);
     }
-});
+}
+
+async function runAllPredictions() {
+    const btn = document.getElementById("runAllPredictionsBtn");
+    if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = `<span class="spinner-border spinner-border-sm me-1"></span> Running...`;
+    }
+
+    for (const asset of assetCatalog) {
+        await runPredictionForAsset(asset);
+    }
+
+    if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="bi bi-lightning-fill me-1"></i> Run All Predictions`;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", loadAssetCatalog);
+
+document.getElementById("runAllPredictionsBtn").addEventListener("click", runAllPredictions);
 
 // --- Image form ---
 document.getElementById("imageForm").addEventListener("submit", async (e) => {
@@ -158,6 +228,17 @@ document.getElementById("imageForm").addEventListener("submit", async (e) => {
 // --- Map setup ---
 const map = L.map("map").setView([37.9101, -122.0652], 13);
 
+// California bounding box
+const californiaBounds = L.latLngBounds(
+    [32.5, -124.5],   // Southwest corner
+    [42.1, -114.1]    // Northeast corner
+);
+
+map.setMaxBounds(californiaBounds);
+map.fitBounds(californiaBounds);
+map.setMinZoom(5);
+map.options.maxBoundsViscosity = 1.0; // smooth resistance at edges instead of a hard snap
+
 const imagery = L.tileLayer(
     "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     {
@@ -174,37 +255,190 @@ const labels = L.tileLayer(
     }
 );
 
+// --- Fire risk layer (USDA Forest Service - Burn Probability, live IIPP service) ---
+const fireRisk = L.esri.imageMapLayer({
+    url: "https://imagery.geoplatform.gov/iipp/rest/services/Fire_Aviation/USFS_EDW_RMRS_WRC_BurnProbability/ImageServer",
+    opacity: 0.6,
+    attribution: "USDA Forest Service, Rocky Mountain Research Station"
+});
+
 imagery.addTo(map);
 labels.addTo(map);
 
-// Fix Leaflet map when accordion opens
-document.getElementById("collapsePredict").addEventListener("shown.bs.collapse", () => {
+let fireRiskAdded = false;
+
+// FIX: the map now lives inside the "Plan My Route" accordion (#collapseRoute),
+// not inside "Predict Maintenance Need" (#collapsePredict) anymore.
+// Leaflet needs invalidateSize() called once the container becomes visible,
+// otherwise the map renders with 0 height/width (blank) and never shows tiles or routes.
+document.getElementById("collapseRoute").addEventListener("shown.bs.collapse", () => {
     setTimeout(() => {
         map.invalidateSize();
+        if (routeLayer) {
+            map.fitBounds(routeLayer.getBounds(), { padding: [30, 30] });
+        }
+        if (fireRiskAdded) {
+            fireRisk.redraw();
+        }
+        // fire layer is only added when the toggle is switched on, not automatically here
     }, 200);
 });
 
-function addMarker(lat, lng, label, needsMaintenance) {
-    const color = needsMaintenance ? "red" : "green";
-    L.circleMarker([lat, lng], { radius: 8, color }).addTo(map)
-        .bindPopup(`${label} — ${needsMaintenance ? "Needs Maintenance" : "OK"}`)
-        .openPopup();
-}
+document.getElementById("fireRiskToggle").addEventListener("change", (e) => {
+    if (e.target.checked) {
+        fireRisk.addTo(map);
+        fireRiskAdded = true;
+    } else {
+        map.removeLayer(fireRisk);
+    }
+});
 
-// --- Route planning (priority order) ---
-const assetLog = [];
+// --- Asset markers on the map, keyed by assetId ---
+// Keyed by assetId so re-running a prediction or re-planning a route
+// updates the same marker instead of stacking duplicates on top of it.
+const assetMarkers = {};
 
-function logAssetForRouting(payload, data) {
-    assetLog.push({
-        assetId: payload.assetId,
-        lat: payload.latitude,
-        lon: payload.longitude,
-        priorityScore: data.priorityScore,
-        priorityLevel: data.priorityLevel
+function createPinIcon(bgColor, label) {
+    return L.divIcon({
+        className: "",
+        html: `<div style="
+            background:${bgColor};
+            width:30px; height:30px;
+            border-radius:50% 50% 50% 0;
+            transform: rotate(45deg);
+            display:flex; align-items:center; justify-content:center;
+            border:2px solid white;
+            box-shadow:0 1px 4px rgba(0,0,0,0.4);
+        "><span style="transform: rotate(-45deg); color:#fff; font-weight:700; font-size:13px;">${label}</span></div>`,
+        iconSize: [30, 30],
+        iconAnchor: [15, 30],
+        popupAnchor: [0, -28]
     });
 }
 
+function addMarker(lat, lng, assetId, needsMaintenance) {
+    const color = needsMaintenance ? "#dc3545" : "#198754";
+    const icon = createPinIcon(color, needsMaintenance ? "!" : "✓");
 
+    if (assetMarkers[assetId]) {
+        map.removeLayer(assetMarkers[assetId]);
+    }
+
+    const marker = L.marker([lat, lng], { icon })
+        .addTo(map)
+        .bindPopup(`<strong>${assetId}</strong><br>${needsMaintenance ? "Needs Maintenance" : "OK"}`)
+        .openPopup();
+
+    assetMarkers[assetId] = marker;
+    return marker;
+}
+
+// Turns an existing asset marker into a numbered "stop" pin once it's part of a planned route.
+function markAsStop(assetId, stopNumber, priorityLevel) {
+    const marker = assetMarkers[assetId];
+    if (!marker) return;
+
+    const priorityBg = {
+        Critical: "#dc3545",
+        High: "#fd7e14",
+        Medium: "#0dcaf0",
+        Low: "#198754"
+    };
+    const bg = priorityBg[priorityLevel] || "#6c757d";
+
+    marker.setIcon(createPinIcon(bg, String(stopNumber)));
+    marker.setPopupContent(`<strong>Stop ${stopNumber}: ${assetId}</strong><br>Priority: ${priorityLevel || "-"}`);
+}
+
+// --- Asset log (single source of truth for the table + routing) ---
+let assetLog = [];
+let nextRowId = 1;
+
+function logAssetForRouting(payload, data) {
+    const existing = assetLog.find(a => a.assetId === payload.assetId);
+
+    if (existing) {
+        existing.assetType = payload.assetType;
+        existing.lat = payload.latitude;
+        existing.lon = payload.longitude;
+        existing.priorityScore = data.priorityScore;
+        existing.priorityLevel = data.priorityLevel;
+        existing.needsMaintenance = data.needsMaintenance;
+        existing.fireDangerRating = data.fireDangerRating;
+    } else {
+        assetLog.push({
+            id: "row-" + nextRowId++,
+            assetId: payload.assetId,
+            assetType: payload.assetType,
+            lat: payload.latitude,
+            lon: payload.longitude,
+            priorityScore: data.priorityScore,
+            priorityLevel: data.priorityLevel,
+            needsMaintenance: data.needsMaintenance,
+            fireDangerRating: data.fireDangerRating,
+            selected: true
+        });
+    }
+
+    renderAssetsTable();
+}
+
+function renderAssetsTable() {
+    const tbody = document.getElementById("assetsTableBody");
+    const noAssetsMsg = document.getElementById("noAssetsMsg");
+    if (!tbody) return; // table only exists once the Route section markup is present
+
+    tbody.innerHTML = "";
+    noAssetsMsg.classList.toggle("d-none", assetLog.length > 0);
+
+    const priorityColors = { Critical: "danger", High: "warning", Medium: "info", Low: "success" };
+    const fireColors = { Extreme: "danger", High: "warning", Moderate: "info", Low: "success" };
+
+    assetLog.forEach(asset => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td><input type="checkbox" class="form-check-input asset-checkbox" data-id="${asset.id}" ${asset.selected ? "checked" : ""}></td>
+            <td>${asset.assetId}</td>
+            <td>${asset.assetType || "-"}</td>
+            <td><span class="badge bg-${priorityColors[asset.priorityLevel] || "secondary"}">${asset.priorityLevel} (${asset.priorityScore.toFixed(0)})</span></td>
+            <td>${asset.needsMaintenance ? "⚠️ Yes" : "OK"}</td>
+            <td><span class="badge bg-${fireColors[asset.fireDangerRating] || "secondary"}">${asset.fireDangerRating || "-"}</span></td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    document.querySelectorAll(".asset-checkbox").forEach(cb => {
+        cb.addEventListener("change", (e) => {
+            const asset = assetLog.find(a => a.id === e.target.getAttribute("data-id"));
+            if (asset) asset.selected = e.target.checked;
+        });
+    });
+}
+
+const selectAllCheckbox = document.getElementById("selectAllAssets");
+if (selectAllCheckbox) {
+    selectAllCheckbox.addEventListener("change", (e) => {
+        assetLog.forEach(a => a.selected = e.target.checked);
+        renderAssetsTable();
+    });
+}
+
+// --- Mode switching (Automatic = all assets by priority, Manual = checked assets only) ---
+const modeAuto = document.getElementById("modeAuto");
+const modeManual = document.getElementById("modeManual");
+const manualSelectPanel = document.getElementById("manualSelectPanel");
+
+if (modeAuto && modeManual && manualSelectPanel) {
+    modeAuto.addEventListener("change", () => {
+        manualSelectPanel.classList.add("d-none");
+    });
+    modeManual.addEventListener("change", () => {
+        manualSelectPanel.classList.remove("d-none");
+        renderAssetsTable();
+    });
+}
+
+// --- Route planning ---
 let routeLayer = null;
 let userLocationMarker = null;
 
@@ -258,10 +492,17 @@ function formatManeuver(maneuver, streetName) {
 
 async function planPriorityRoute() {
     const summaryDiv = document.getElementById("routeSummary");
+    const isManual = modeManual && modeManual.checked;
 
-    if (assetLog.length < 1) {
+    const chosenAssets = isManual
+        ? assetLog.filter(a => a.selected)
+        : assetLog;
+
+    if (chosenAssets.length < 1) {
         summaryDiv.classList.remove("d-none");
-        summaryDiv.textContent = "Need at least 1 predicted asset to plan a route. Run a prediction first.";
+        summaryDiv.textContent = isManual
+            ? "Select at least 1 asset from the table."
+            : "Need at least 1 predicted asset to plan a route. Run a prediction first.";
         return;
     }
 
@@ -286,8 +527,13 @@ async function planPriorityRoute() {
         })
     }).addTo(map).bindPopup("Your current location").openPopup();
 
-    // Sort predicted assets by priority, highest first
-    const sortedAssets = [...assetLog].sort((a, b) => b.priorityScore - a.priorityScore);
+    // Sort chosen assets by priority, highest first
+    const sortedAssets = [...chosenAssets].sort((a, b) => b.priorityScore - a.priorityScore);
+
+    // Update each asset's map pin to show its stop number in route order
+    sortedAssets.forEach((asset, idx) => {
+        markAsStop(asset.assetId, idx + 1, asset.priorityLevel);
+    });
 
     // Build stop list: your location FIRST, then assets in priority order
     const allStops = [
@@ -318,6 +564,9 @@ async function planPriorityRoute() {
 
         const coords = route.geometry.coordinates.map(c => [c[1], c[0]]);
         routeLayer = L.polyline(coords, { color: "#0d6efd", weight: 5, opacity: 0.8 }).addTo(map);
+
+        // Make sure the map has its real size before fitting bounds
+        map.invalidateSize();
         map.fitBounds(routeLayer.getBounds(), { padding: [30, 30] });
 
         const orderList = allStops.map((a, i) =>
@@ -337,36 +586,24 @@ async function planPriorityRoute() {
             <h6 class="card-title"><i class="bi bi-signpost-split-fill me-2"></i>Turn-by-Turn Directions</h6>
             <ol class="mb-0" style="max-height: 300px; overflow-y: auto;">`;
 
-                route.legs.forEach((leg, legIndex) => {
-                    leg.steps.forEach(step => {
-                        const streetName = step.name || "Unnamed road";
-                        const maneuver = formatManeuver(step.maneuver, streetName);
-                        const distanceMi = (step.distance / 1609.34).toFixed(2);
+        route.legs.forEach((leg) => {
+            leg.steps.forEach(step => {
+                const streetName = step.name || "Unnamed road";
+                const maneuver = formatManeuver(step.maneuver, streetName);
+                const distanceMi = (step.distance / 1609.34).toFixed(2);
 
-                        if (maneuver) {
-                            stepsHtml += `<li class="mb-1">${maneuver} <span class="text-muted">(${distanceMi} mi)</span></li>`;
-                        }
-                    });
-                });
+                if (maneuver) {
+                    stepsHtml += `<li class="mb-1">${maneuver} <span class="text-muted">(${distanceMi} mi)</span></li>`;
+                }
+            });
+        });
 
-                stepsHtml += `</ol></div></div>`;
-                directionsDiv.innerHTML = stepsHtml;
+        stepsHtml += `</ol></div></div>`;
+        directionsDiv.innerHTML = stepsHtml;
 
     } catch (err) {
         summaryDiv.textContent = "Error planning route: " + err.message;
     }
 }
 
-document.getElementById("planRouteBtn").addEventListener("click", planPriorityRoute);
-
-function logAssetForRouting(payload, data) {
-    assetLog.push({
-        assetId: payload.assetId,
-        lat: payload.latitude,
-        lon: payload.longitude,
-        priorityScore: data.priorityScore,
-        priorityLevel: data.priorityLevel
-    });
-}
-
-// ⬇️ paste the planPriorityRoute function and event listener from above here
+document.getElementById("createRoutePlanBtn").addEventListener("click", planPriorityRoute);

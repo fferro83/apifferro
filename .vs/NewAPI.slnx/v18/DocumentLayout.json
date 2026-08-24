@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\predictioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:wwwroot\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -11,16 +23,24 @@
       "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\predictionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\models\\predictionwithweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:models\\predictionwithweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:controllers\\imagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|c:\\users\\fcofe\\source\\repos\\newapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D3A84A2-E4A4-6397-8434-170E1D4DA02F}|NewAPI.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +54,57 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "PredictionController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PredictionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PredictionController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PredictionController.cs",
+              "RelativeToolTip": "Controllers\\PredictionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T21:57:06.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssetsController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\AssetsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AssetsController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\AssetsController.cs",
+              "RelativeToolTip": "Controllers\\AssetsController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-21T22:01:56.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherService.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\WeatherService.cs",
+              "RelativeDocumentMoniker": "Services\\WeatherService.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\WeatherService.cs",
+              "RelativeToolTip": "Services\\WeatherService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T19:43:06.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ImageController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ImageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ImageController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\ImageController.cs",
+              "RelativeToolTip": "Controllers\\ImageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-14T19:57:10.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "PredictionWithWeather.cs",
               "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Models\\PredictionWithWeather.cs",
               "RelativeDocumentMoniker": "Models\\PredictionWithWeather.cs",
@@ -46,39 +116,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\index.html",
-              "RelativeDocumentMoniker": "wwwroot\\index.html",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\index.html",
-              "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAALAAAAAAAAAAAAASwMkAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-08-12T20:01:22.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "app.js",
               "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\js\\app.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\app.js",
               "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\js\\app.js",
               "RelativeToolTip": "wwwroot\\js\\app.js",
-              "ViewState": "AgIAANQAAAAAAAAAAAAwwAABAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-08-12T19:57:18.328Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PredictionService.cs",
               "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\PredictionService.cs",
               "RelativeDocumentMoniker": "Services\\PredictionService.cs",
               "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\PredictionService.cs",
               "RelativeToolTip": "Services\\PredictionService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAgwE8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-12T19:53:18.73Z",
               "EditorCaption": ""
@@ -86,14 +143,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "WeatherService.cs",
-              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\WeatherService.cs",
-              "RelativeDocumentMoniker": "Services\\WeatherService.cs",
-              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Services\\WeatherService.cs",
-              "RelativeToolTip": "Services\\WeatherService.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAowEQAAAAJAAAAAAAAAA==",
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAiwKgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-08-12T20:01:22.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PersonController.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PersonController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PersonController.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Controllers\\PersonController.cs",
+              "RelativeToolTip": "Controllers\\PersonController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-12T19:43:06.283Z"
+              "WhenOpened": "2026-08-14T19:57:01.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\fcofe\\source\\repos\\NewAPI\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-12T22:33:38.756Z"
             }
           ]
         }

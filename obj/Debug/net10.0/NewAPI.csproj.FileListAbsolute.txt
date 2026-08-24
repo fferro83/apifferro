@@ -4,7 +4,6 @@ C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\NewAPI.staticwebassets.runt
 C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\NewAPI.staticwebassets.endpoints.json
 C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Models\imagenet-labels.txt
 C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\NewAPI.exe
-C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Data\sample-data.csv
 C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Models\TrainedModel.zip
 C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\Models\resnet50.onnx
 C:\Users\fcofe\source\repos\NewAPI\bin\Debug\net10.0\NewAPI.deps.json
@@ -228,5 +227,5 @@ C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\refint\NewAPI.dll
 C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\NewAPI.pdb
 C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\NewAPI.genruntimeconfig.cache
 C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\ref\NewAPI.dll
-C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\compressed\ldf9yn988e-{0}-hg4qwf0ncw-hg4qwf0ncw.gz
-C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\compressed\htwe6yf5lg-{0}-w0ty7jrbky-w0ty7jrbky.gz
+C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\compressed\ldf9yn988e-{0}-cynwuri7qx-cynwuri7qx.gz
+C:\Users\fcofe\source\repos\NewAPI\obj\Debug\net10.0\compressed\htwe6yf5lg-{0}-pl7lrqxagd-pl7lrqxagd.gz

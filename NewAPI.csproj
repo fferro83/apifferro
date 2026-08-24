@@ -34,9 +34,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Data\sample-data.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Models\TrainedModel.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
